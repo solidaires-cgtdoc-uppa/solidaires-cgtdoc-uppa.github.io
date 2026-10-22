@@ -2,7 +2,262 @@
 <html lang="fr">
 	<head>
 		<title>Syndicats de luttes : Pour une université gratuite, émancipatrice, de proximité</title>
-		<link rel="stylesheet" href="assets/style.css"/>
+		<style>
+		 @import url('https://fonts.googleapis.com/css2?family=Arimo&family=Montserrat:wght@700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css');
+
+html {
+    font-family: 'Arimo', sans-serif;
+    background-color: #ffffff;
+    color: #383E4B;
+    max-width:95%;
+    margin:auto;
+    scroll-behavior:smooth;
+    line-height:1.45;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    max-width:1250px;
+    margin:auto;
+}
+header {
+    text-align:center;
+}
+header img {
+    max-width:250px;
+    margin:auto;
+    display:inline-block;
+}
+header h1 {
+	font-size: clamp(1.7em, 5vw, 3em);
+}
+header h2 {
+	font-size: clamp(1.05em, 3.5vw, 1.6em);
+}
+header p {
+	font-weight: bolder;
+	font-size: clamp(1em, 2.5vw, 1.4em);
+}
+main h2 {
+	display: inline-block;
+	border-bottom: 4px solid #000;
+	padding-bottom: .15em;
+	margin-bottom: .75em;
+}
+.rs, footer nav, .partenaires {
+	margin:auto;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	flex-wrap:wrap;
+	gap:1em;
+}
+footer {
+	margin-top:5em;
+}
+a {
+    color:#0099d1;
+    text-decoration:none;
+    transition: color .15s ease-in-out;
+}
+a:hover {
+	text-decoration:underline;
+}
+::selection {
+	background:#000;
+	color:#fff;
+}
+:focus-visible {
+	outline:3px solid #0099d1;
+	outline-offset:2px;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border:0;
+	vertical-align: middle;
+}
+.social {
+    font-size:2em;
+    color:#000;
+    transition: color .15s ease-in-out, transform .15s ease-in-out;
+}
+.social:hover {
+	color:#0099d1;
+	transform:scale(1.15);
+	text-decoration:none;
+}
+.professionfoi {
+	display:grid;
+	grid-template-columns: 40% 40%;
+	grid-column-gap: 5%;
+	grid-row-gap: 50px;
+	margin-bottom:.5em;
+}
+.axes {
+	max-width:900px;
+	margin:auto;
+}
+.pfbox {
+	display:inline-block;
+	font-family: 'Montserrat', sans-serif;
+	padding: 5%;
+	text-align:center;
+	border-radius:0.5em;
+	color:#fff;
+}
+.pf { background:#000;}
+.axe1 { background:#07326d;}
+.axe2 { background:#BC0000;}
+.axe3 { background:#3F3BF4;}
+.axe4 { background:#E66718;}
+.axe5 { background:#750787;}
+.axe6 { background:#F4BF3B;}
+.axe7 { background:#34993F;}
+.axe8 { background:#07616D;}
+
+/* ===== Accordéons des axes ===== */
+.axe {
+	border:2px solid #000;
+	border-radius:0.5em;
+	overflow:hidden;
+	margin-bottom:1.5em;
+}
+.axe summary {
+	list-style:none;
+	cursor:pointer;
+	display:flex;
+	align-items:center;
+	gap:.75em;
+	padding:1em 1.25em;
+	color:#fff;
+	font-family:'Montserrat', sans-serif;
+	font-weight:700;
+	font-size: clamp(1em, 2.5vw, 1.15em);
+	line-height:1.3;
+	user-select:none;
+	transition:filter .15s ease-in-out;
+}
+.axe summary:hover {
+	filter:brightness(1.15);
+}
+.axe summary::-webkit-details-marker {
+	display:none;
+}
+.axe .num {
+	flex:none;
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	width:1.9em;
+	height:1.9em;
+	border:2px solid #fff;
+	border-radius:50%;
+	font-size:.9em;
+}
+.axe .chev {
+	margin-left:auto;
+	flex:none;
+	width:.5em;
+	height:.5em;
+	border-right:.22em solid #fff;
+	border-bottom:.22em solid #fff;
+	transform:rotate(45deg);
+	transition:transform .2s ease-in-out;
+}
+.axe[open] > summary .chev {
+	transform:rotate(225deg);
+}
+.axe .axe-content {
+	padding:1.25em 1.5em;
+	background:#f3f3f3;
+	border-top:2px solid #000;
+	line-height:1.55;
+}
+.axe .axe-content p {
+	margin-top:0;
+}
+.axe .axe-content ul {
+	margin-bottom:0;
+}
+/* Texte lisible sur le fond jaune de l'axe 6 */
+.axe .axe6 {
+	color:#383E4B;
+	border-color:#383E4B;
+}
+/* ===== Fin accordéons ===== */
+
+.voter {
+		color:#000;
+	border:3px solid #000;
+	padding: 10px 0;
+	display:block;
+	margin: 10px;
+
+}
+.buttonvote {
+	color:#000;
+	border:3px solid #000;
+	padding: 10px 0;
+	display:block;
+	text-transform:uppercase;
+	letter-spacing:.06em;
+	font-size:1.15em;
+	transition: color .2s ease-in-out, background .2s ease-in-out;
+}
+.buttonvote:hover {
+	color:#fff;
+	background:#000;
+}
+
+.communiques {
+	border:2px solid #000;
+	border-radius:0.5em;
+	padding:1em;
+	margin-top:1em;
+	background:#f3f3f3;
+}
+/*
+.professionfoi ul {
+    column-count: 2;
+}
+.professionfoi li {
+	display:inline-block;
+	border: 1px solid #000;
+	border-radius:1em;
+	padding:0.75em;
+	margin:0.5em;
+}
+*/
+
+.partenaires img {
+    height:80px;
+    display:inline-block;
+}
+@media (max-width: 1000px) {
+	header img {
+	    max-width:100px;
+	}
+	.pfbox {
+		display:block;
+		margin:1em;
+	}
+	.partenaires img {
+		height:50px;
+	}
+	.axe summary {
+		padding:1em .9em;
+	}
+	.axe .axe-content {
+		padding:1.1em 1em;
+	}
+	.rs {
+		justify-content:center;
+	}
+}
+</style>
 
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -15,21 +270,62 @@
 		</header>
 		<main id="main">
 			<div class="voter">
-				<a href="https://vote547.neovote.com/" class="pfbox buttonvote">Clique ici pour voter</a>
-				<center><a href="https://gestion.neovote.com/h001_login_request1.php5?zz_o_id=IU5LIQKpMBnBdwRWmdy_bWLQ10PvcR08rOLVI7tXAbnAtiFt9w@@&zz_g_id=e7311aeccebc299ea19570fbe9a27dff" style="text-align:center;">J'ai perdu mon identifiant pour les élections !</a></center>
+				<a href="#" class="pfbox buttonvote">Clique ici pour voter</a>
+				<center><a href="#" style="text-align:center;">J'ai perdu mon identifiant pour les élections !</a></center>
 				<h2>Comment voter aux élections ?</h2>
 				<ol>
 					<li>Rends-toi sur <a href="https://partage.univ-pau.fr/"><b>ton mail étudiant</b></a> et trouve le mail daté du 18/11/2022 dont l'objet commence par <b>"Personnel et confidentiel"</b>.</li>
-					<li>Avec l'identifiant fourni dans ce dernier et de ton numéro étudiant, connecte-toi sur le lien indiqué (neovote) et génère un mot de passe (tu peux choisir de le recevoir par mail ou SMS). En cas de suppression du courriel, tu peux retrouver un nouveau mot de passe à <a href="https://gestion.neovote.com/h001_login_request1.php5?zz_o_id=IU5LIQKpMBnBdwRWmdy_bWLQ10PvcR08rOLVI7tXAbnAtiFt9w@@&zz_g_id=3a97cbe0416977eba828d8c7ad9d0cb0">cette adresse</a>.</li>
+					<li>Avec l'identifiant fourni dans ce dernier et de ton numéro étudiant, connecte-toi sur le lien indiqué (neovote) et génère un mot de passe (tu peux choisir de le recevoir par mail ou SMS). En cas de suppression du courriel, tu peux retrouver un nouveau mot de passe à <a href="#">cette adresse</a>.</li>
 					<li>Tu peux désormais te rendre dans l'espace de vote à l'aide du mot de passe que tu viens de recevoir, où tu auras accès aux différents conseils pour lesquels tu peux voter.</li>
 					<li>Clique sur la liste <b>Syndicats de luttes</b> et valide ton choix à l'aide du mot de passe (attention, une fois validé, un choix ne peut être modifié).</li>
 					<li><i>Tu peux voter pour plusieurs conseils, il faut donc répéter l'opération autant de fois qu'il y a de conseils.</i></li>
 				</ol>
 			</div>
-			    <div class="professionfoi">
-				    <h2>Notre profession de foi</h2>
-			    </div>
-		    
+			<h2>Notre profession de foi</h2>
+
+			<div class="axes">
+				<details class="axe">
+					<summary class="axe1"><span class="num">1</span>Une université gratuite<span class="chev"></span></summary>
+					<div class="axe-content">
+					</div>
+				</details>
+				<details class="axe">
+					<summary class="axe2"><span class="num">2</span>Une aide sociale digne<span class="chev"></span></summary>
+					<div class="axe-content">
+					</div>
+				</details>
+				<details class="axe">
+					<summary class="axe3"><span class="num">3</span>Un logement étudiant accessible<span class="chev"></span></summary>
+					<div class="axe-content">
+					</div>
+				</details>
+				<details class="axe">
+					<summary class="axe4"><span class="num">4</span>Manger correctement, sans se ruiner<span class="chev"></span></summary>
+					<div class="axe-content">
+					</div>
+				</details>
+				<details class="axe">
+					<summary class="axe5"><span class="num">5</span>La santé étudiante comme priorité<span class="chev"></span></summary>
+					<div class="axe-content">
+					</div>
+				</details>
+				<details class="axe">
+					<summary class="axe6"><span class="num">6</span>De meilleures conditions d'études<span class="chev"></span></summary>
+					<div class="axe-content">
+					</div>
+				</details>
+				<details class="axe">
+					<summary class="axe7"><span class="num">7</span>Une université démocratique<span class="chev"></span></summary>
+					<div class="axe-content">
+					</div>
+				</details>
+				<details class="axe">
+					<summary class="axe8"><span class="num">8</span>Une université de proximité, ancrée sur son territoire<span class="chev"></span></summary>
+					<div class="axe-content">
+					</div>
+				</details>
+			</div>
+
                <!-- <div class="communiques">
 			    <h2>Communiqués</h2>
 			    <ul>
@@ -51,8 +347,8 @@
             </div>
 		</main>
 		<footer>
-		<footer>
 		  
+		</footer>
 		<script src="https://unpkg.com/konami"></script>
 		<script>
 		  const easterEgg = new Konami("https://fr.wikipedia.org/wiki/Mouvement_du_22_Mars")
