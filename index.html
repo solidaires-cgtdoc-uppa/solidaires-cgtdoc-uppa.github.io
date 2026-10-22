@@ -46,13 +46,20 @@ main h2 {
 	padding-bottom: .15em;
 	margin-bottom: .75em;
 }
-.rs, footer nav, .partenaires {
+.rs, footer nav {
 	margin:auto;
 	display:flex;
 	flex-direction:row;
 	justify-content:space-around;
 	flex-wrap:wrap;
 	gap:1em;
+}
+.partenaires {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	gap:20px;
 }
 footer {
 	margin-top:5em;
@@ -232,9 +239,32 @@ img {
 }
 */
 
+.partenaires a {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	gap:.75em;
+	width:min(210px, 100%);
+	padding:1.5em 1em;
+	background:#fff;
+	border:1px solid #e0e0e0;
+	border-radius:8px;
+	box-shadow:0 2px 4px rgba(0,0,0,.1);
+	color:#383E4B;
+	text-align:center;
+	transition:box-shadow .2s ease-in-out, transform .2s ease-in-out;
+}
+.partenaires a:hover {
+	transform:translateY(-3px);
+	box-shadow:0 4px 10px rgba(0,0,0,.15);
+	text-decoration:none;
+}
 .partenaires img {
-    height:80px;
-    display:inline-block;
+	height:80px;
+	max-width:80%;
+	object-fit:contain;
+	display:block;
 }
 @media (max-width: 1000px) {
 	header img {
@@ -246,6 +276,9 @@ img {
 	}
 	.partenaires img {
 		height:50px;
+	}
+	.partenaires a {
+		padding:1em .75em;
 	}
 	.axe summary {
 		padding:1em .9em;
@@ -266,62 +299,108 @@ img {
 		<header id="header" class="h-card">
 			<h1>Syndicats de luttes</h1>
             <h2>Pour une université gratuite, émancipatrice, de proximité</h2>
-            <p>Avec le soutien de la <a href="https://democratie-collegialite-servicepublic-uppa.fr/">liste UHS</a></p>
 		</header>
 		<main id="main">
 			<div class="voter">
-				<a href="#" class="pfbox buttonvote">Clique ici pour voter</a>
-				<center><a href="#" style="text-align:center;">J'ai perdu mon identifiant pour les élections !</a></center>
+				<a href="https://vote547.neovote.com/" class="pfbox buttonvote">Clique ici pour voter</a>
+				<center><a href="https://gestion.neovote.com/h001_login_request1.php5?zz_o_id=IU5LIQKpMBnBdwRWmdy_bWLQ10PvcR08rOLVI7tXAbnAtiFt9w@@&zz_g_id=e7311aeccebc299ea19570fbe9a27dff" style="text-align:center;">J'ai perdu mon identifiant pour les élections !</a></center>
 				<h2>Comment voter aux élections ?</h2>
 				<ol>
 					<li>Rends-toi sur <a href="https://partage.univ-pau.fr/"><b>ton mail étudiant</b></a> et trouve le mail daté du 18/11/2022 dont l'objet commence par <b>"Personnel et confidentiel"</b>.</li>
-					<li>Avec l'identifiant fourni dans ce dernier et de ton numéro étudiant, connecte-toi sur le lien indiqué (neovote) et génère un mot de passe (tu peux choisir de le recevoir par mail ou SMS). En cas de suppression du courriel, tu peux retrouver un nouveau mot de passe à <a href="#">cette adresse</a>.</li>
+					<li>Avec l'identifiant fourni dans ce dernier et de ton numéro étudiant, connecte-toi sur le lien indiqué (neovote) et génère un mot de passe (tu peux choisir de le recevoir par mail ou SMS). En cas de suppression du courriel, tu peux retrouver un nouveau mot de passe à <a href="https://gestion.neovote.com/h001_login_request1.php5?zz_o_id=IU5LIQKpMBnBdwRWmdy_bWLQ10PvcR08rOLVI7tXAbnAtiFt9w@@&zz_g_id=3a97cbe0416977eba828d8c7ad9d0cb0">cette adresse</a>.</li>
 					<li>Tu peux désormais te rendre dans l'espace de vote à l'aide du mot de passe que tu viens de recevoir, où tu auras accès aux différents conseils pour lesquels tu peux voter.</li>
 					<li>Clique sur la liste <b>Syndicats de luttes</b> et valide ton choix à l'aide du mot de passe (attention, une fois validé, un choix ne peut être modifié).</li>
 					<li><i>Tu peux voter pour plusieurs conseils, il faut donc répéter l'opération autant de fois qu'il y a de conseils.</i></li>
 				</ol>
 			</div>
 			<h2>Notre profession de foi</h2>
-
 			<div class="axes">
 				<details class="axe">
 					<summary class="axe1"><span class="num">1</span>Une université gratuite<span class="chev"></span></summary>
 					<div class="axe-content">
+						<p>La connaissance n'est pas une marchandise. Nous voulons une université accessible à toutes et tous, sans barrière financière.</p>
+						<ul>
+							<li>Suppression de tous les frais annexes et du tarif des certificats de scolarité ;</li>
+							<li>Prise en charge intégrale des manuels et licences logicielles obligatoires ;</li>
+							<li>Zéro frais cachés : un coût d'inscription affiché, lisible et unique.</li>
+						</ul>
 					</div>
 				</details>
 				<details class="axe">
 					<summary class="axe2"><span class="num">2</span>Une aide sociale digne<span class="chev"></span></summary>
 					<div class="axe-content">
+						<p>Étudier ne doit pas être un privilège de familles aisées.</p>
+						<ul>
+							<li>Révision des critères sociaux de l'UPPA pour les bourses au mérite et à la bourse ;</li>
+							<li>Fonds d'aide d'urgence accessible en moins de 48 h ;</li>
+							<li>Accompagnement individualisé pour les dossiers CROUS et DSE.</li>
+						</ul>
 					</div>
 				</details>
 				<details class="axe">
 					<summary class="axe3"><span class="num">3</span>Un logement étudiant accessible<span class="chev"></span></summary>
 					<div class="axe-content">
+						<p>Chaque étudiante, chaque étudiant doit pouvoir se loger à prix coûtant près de son campus.</p>
+						<ul>
+							<li>Augmentation du parc CROUS sur Pau, Bayonne, Anglet et Mont-de-Marsan ;</li>
+							<li>Lutte contre les marchands de lits et les loyers abusifs ;</li>
+							<li>Guichet unique logement sur chaque site de l'UPPA.</li>
+						</ul>
 					</div>
 				</details>
 				<details class="axe">
 					<summary class="axe4"><span class="num">4</span>Manger correctement, sans se ruiner<span class="chev"></span></summary>
 					<div class="axe-content">
+						<p>Se nourrir est un droit, pas une option de budget étudiant.</p>
+						<ul>
+							<li>Repas à 1 € pour toutes et tous, sans condition de bourse ;</li>
+							<li>Élargissement des horaires d'ouverture des restaurants universitaires ;</li>
+							<li>Distribution alimentaire et frigos solidaires sur les campus.</li>
+						</ul>
 					</div>
 				</details>
 				<details class="axe">
 					<summary class="axe5"><span class="num">5</span>La santé étudiante comme priorité<span class="chev"></span></summary>
 					<div class="axe-content">
+						<p>La santé physique et mentale des étudiantes et étudiants doit cesser d'être le parent pauvre de l'université.</p>
+						<ul>
+							<li>Renfort des services de santé universitaires (infirmières, psychologues, médecins) ;</li>
+							<li>Ligne d'écoute psychologique accessible en continu ;</li>
+							<li>Aménagement d'études systématique en cas de trouble de santé.</li>
+						</ul>
 					</div>
 				</details>
 				<details class="axe">
 					<summary class="axe6"><span class="num">6</span>De meilleures conditions d'études<span class="chev"></span></summary>
 					<div class="axe-content">
+						<p>Amphis chauffés, TD allégés, matériel fonctionnel : les bases pour étudier dans de bonnes conditions.</p>
+						<ul>
+							<li>Réduction des effectifs des groupes de TD ;</li>
+							<li>Investissement massif dans les bâtiments vétustes ;</li>
+							<li>Accès équitable aux salles de travail et à l'informatique sur tous les sites.</li>
+						</ul>
 					</div>
 				</details>
 				<details class="axe">
 					<summary class="axe7"><span class="num">7</span>Une université démocratique<span class="chev"></span></summary>
 					<div class="axe-content">
+						<p>Les étudiantes et étudiants sont des membres à part entière de l'université : leur voix doit compter.</p>
+						<ul>
+							<li>Concertation réelle sur les maquettes et le calendrier universitaire ;</li>
+							<li>Transparence des instances et des budgets ;</li>
+							<li>Soutien aux conseils et aux listes de lutte dans tous les conseils.</li>
+						</ul>
 					</div>
 				</details>
 				<details class="axe">
 					<summary class="axe8"><span class="num">8</span>Une université de proximité, ancrée sur son territoire<span class="chev"></span></summary>
 					<div class="axe-content">
+						<p>Entre Bayonne, Pau et Mont-de-Marsan, l'UPPA doit rester un service public présent partout.</p>
+						<ul>
+							<li>Maintien et développement des filières sur les sites périphériques ;</li>
+							<li>Transports en commun gratuits pour les étudiantes et étudiants ;</li>
+							<li>Liens renforcés entre l'université et les acteurices locales (stages, alternance, culture).</li>
+						</ul>
 					</div>
 				</details>
 			</div>
@@ -332,12 +411,15 @@ img {
 				    <li>05-12-2022 : Communiqué de presse :</li>
 			    </ul>
 		    </div> -->
-			
+			<h2>Organisations membres</h2>
+				<div class="partenaires">
+				<a href="linktr.ee/seslpau"><img src="assets/img/solidaires.png" alt="Solidaires Étudiant·e·s Pau - Béarn" /><span>Solidaires Étudiant·e·s Pau - Béarn</span></a>
+				<a href="#"><img src="assets/img/cgt-doctorants.png" alt="Collectif doctorants"/><span>Collectif doctorants</span></a>
+			</div>
 			<h2>Ils nous soutiennent</h2>
 			<div class="partenaires">
-				<a href="https://www.instagram.com/solidaires_etudiant.e.s_pau/"><img src="assets/img/solidaires.png" alt="Solidaires Étudiant·e·s Pau - Béarn" /></a>
-				<a href="#"><img src="assets/img/cgt-doctorants.png" alt="Collectif doctorants"/></a>
-				<a href="https://cgt.fercsup.net/syndicats/aquitaine-limousin-poitou-charentes/universite-de-pau-et-des-pays-de-l-adour-uppa/"><img src="assets/img/cgt.png" alt="CGT FERC sup UPPA" /></a>
+				<a href="https://cgt.fercsup.net/syndicats/aquitaine-limousin-poitou-charentes/universite-de-pau-et-des-pays-de-l-adour-uppa/"><img src="assets/img/cgt.png" alt="CGT FERC sup UPPA" /><span>CGT FERC Sup UPPA</span></a>
+				<a href="https://democratie-collegialite-servicepublic-uppa.fr/"><img src="assets/img/UHS.png" alt="UHS" /><span>Liste UHS</span></a>
 			</div>
 			<h2>Nous rejoindre sur les réseaux sociaux</h2>
             <div class="rs">
@@ -353,6 +435,6 @@ img {
 		<script>
 		  const easterEgg = new Konami("https://fr.wikipedia.org/wiki/Mouvement_du_22_Mars")
 		</script>
-		<p style="font-size:0.4em;float:left"><a href="https://github.com/solidaires-cgtdoc-uppa/solidaires-cgtdoc-uppa.github.io">Se connecter à l’interface d’édition</a></p>
+		
 	</body>
 </html>
