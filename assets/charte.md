@@ -38,7 +38,7 @@ Toute prise de parole à titre personnel doit être explicitement signalée comm
 Le non-respect des engagements de la présente charte, en particulier le fait de **parler ou voter au nom du collectif sans mandat ni discussion préalable**, constitue un manquement grave. Il est passible :
 
 1. **Au premier manquement** : rappel à l'ordre et demande de justification écrite.
-2. **En cas de récidive ou de manquement grave** : **exclusion de la liste** pour la suite de la mandature, après vote du collectif à la majorité qualifiée fixée par ses statuts, avec un droit de défense garanti à l'élu·e concerné·e.
+2. **En cas de récidive ou de manquement grave** : **exclusion de la liste** pour la suite de la mandature, après vote du collectif à la majorité qualifiée, avec un droit de défense garanti à l'élu·e concerné·e.
 
 L'exclusion de la liste emporte la perte du soutien du collectif (logistique, communication, investiture aux élections suivantes), sans remettre en cause le mandat électoral en cours, que la loi ne permet pas de révoquer.
 
