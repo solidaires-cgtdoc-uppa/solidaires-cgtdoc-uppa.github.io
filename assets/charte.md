@@ -1,3 +1,4 @@
+![](https://solidaires-cgtdoc-uppa.github.io/assets/syndicatdelutte.svg)
 # Charte de l'élu·e étudiant·e - Liste Syndicats de lutte
 
 ## Préambule
