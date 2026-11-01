@@ -1,22 +1,22 @@
-# Règlement intérieur du XXXX
+# Règlement intérieur du « *Pour une université populaire* »
 
 Adopté par l'assemblée générale le \_\_\_\_\_\_\_\_\_\_\_\_\_\_.
 
 ## Article 1 — Préambule
 
-1. Le XXXX est une organisation électorale et ne vise pas à être un collectif militant-es en dehors des élections ou d'événements ponctuels. Le XXXX a pour unique objet une alliance électorale le temps des élections, et n'a pas vocation à se substituer au travail de ses composantes. Le présent règlement s'applique pendant toute la durée des mandats issus de la liste.
-2. Nul ne peut se réclamer du XXXX sans être membre en cours de validité (organisation ou individuel).
+1. Le « *Pour une université populaire* » est une organisation électorale et ne vise pas à être un collectif militant-es en dehors des élections ou d'événements ponctuels. Le « *Pour une université populaire* » a pour unique objet une alliance électorale le temps des élections, et n'a pas vocation à se substituer au travail de ses composantes. Le présent règlement s'applique pendant toute la durée des mandats issus de la liste.
+2. Nul ne peut se réclamer du « *Pour une université populaire* » sans être membre en cours de validité (organisation ou individuel).
 
 ## Article 2 — Membres et fonctionnement de l'AG
 
 1. L'assemblée générale (AG), composée de la totalité des membres, est l'instance souveraine. Aucun·e membre ne dispose d'un pouvoir supérieur à un·e autre.
-2. **Composition.** Le XXXX se compose :
+2. **Composition.** Le « *Pour une université populaire* » se compose :
   - d'**organisations membres** : associations, syndicats, collectifs ou listes étudiant·e·s qui en font la demande ;
   - de **membres individuels**, dits « sympathisant·e·s », formant un collège unique disposant d'une seule voix, dont la position est déterminée par le vote majoritaire interne au collège (à main levée ou toute autre méthode jugée adéquate) ; en cas d'égalité interne, le collège s'abstient.
 3. **Adhésion des organisations.** L'adhésion d'une organisation est validée en AG, à la majorité qualifiée du point 9, après demande écrite. L'organisation désigne par écrit un·e ou deux représentant·e·s habilité·e·s à exprimer sa voix en AG. L'AG peut refuser l'adhésion d'organisations dépourvues d'activité réelle ou substantiellement identiques entre elles.
 4. **Adhésion individuelle.** L'adhésion individuelle est formulée par écrit auprès du collectif ; elle est enregistrée dès réception, l'adresse de convocation de la personne étant ajoutée à la liste prévue au point 7, et validée à l'AG suivante, la personne disposant entre-temps d'une voix consultative. Ne votent au sein du collège « sympathisant·e·s » que les adhésions enregistrées depuis au moins huit jours au jour de l'AG.
 5. **Perte de la qualité de membre.** La qualité de membre se perd par démission écrite ou par radiation. La radiation — d'une organisation ou d'un·e membre individuel — est prononcée par l'AG à la majorité qualifiée du point 9, après information écrite du motif et droit de défense (écrit et/ou oral en AG). Elle emporte la perte des droits de vote et de convocation. L'organisation ou la personne concernée ne participe pas au vote de sa propre radiation.
-6. **Incompatibilité.** Nul·le ne peut être ou rester membre du XXXX tout en étant candidat·e ou investi·e sur une liste concurrente à la même élection, ou en faisant la promotion active.
+6. **Incompatibilité.** Nul·le ne peut être ou rester membre du « *Pour une université populaire* » tout en étant candidat·e ou investi·e sur une liste concurrente à la même élection, ou en faisant la promotion active.
 7. **Convocation.** Toute organisation ou personne membre peut convoquer l'AG et proposer un point d'ordre du jour. La liste des adresses de convocation — celles des représentant·e·s des organisations membres et des membres individuels — est maintenue collectivement et diffusée avec chaque compte rendu ; chaque membre est responsable de la mise à jour de ses propres adresses. L'ordre du jour est envoyé avec la convocation, au moins cinq jours calendaires avant, aux adresses figurant sur cette liste, la communication valant notification. Les adresses ne sont utilisées que pour la vie du collectif et ne sont jamais transmises à des tiers. En cas de convocations concurrentes pour une même date, la première envoyée prévaut. Toute radiation, mesure concernant un·e élu·e (article 3) ou modification du présent règlement doit figurer expressément à l'ordre du jour.
 8. **Quorum.** L'AG ne délibère valablement que si la moitié au moins des organisations membres y sont représentées. Si le quorum n'est pas atteint, une nouvelle AG peut être convoquée sous les mêmes formes ; elle statue alors valablement sur les affaires courantes, mais toute radiation, mesure concernant un·e élu·e ou modification du présent règlement demeure soumise au quorum.
 9. **Décisions.** Les décisions sont prises à la majorité qualifiée des trois quarts des suffrages exprimés. Chaque organisation membre représentée dispose d'une voix ; le collège « sympathisant·e·s » dispose d'une voix unique. L'abstention n'étant pas comptée parmi les suffrages exprimés, une décision n'est acquise que si elle recueille effectivement les trois quarts des voix exprimées. Les élu·e·s et suppléant·e·s non membres participent aux débats avec voix consultative. Une proposition n'obtenant pas cette majorité est réputée rejetée.
@@ -56,16 +56,16 @@ Les élu·e·s et suppléant·e·s étudiant·e·s s'engagent à représenter fi
 1. Le présent règlement intérieur peut être modifié par l'AG, à la majorité qualifiée de l'article 2, point 9, la modification figurant expressément à l'ordre du jour.
 2. Il s'applique pendant toute la durée des mandats issus de la liste, jusqu'à son terme ou sa révision.
 
-Fait à Pau, adopté par l'assemblée générale du XXXX.
+Fait à Pau, adopté par l'assemblée générale du « *Pour une université populaire* ».
 
 
 ---
 
-Charte d'engagement de l'élu·e — XXXX
+Charte d'engagement de l'élu·e — « *Pour une université populaire* »
 
 À signer avant toute investiture sur la liste.
 
-Je soussigné·e ______________________, investi·e sur la liste du XXXX en qualité d'élu·e (titulaire / suppléant·e) pour l'élection ______________________, déclare avoir pris connaissance du règlement intérieur du XXXX, dans sa version adoptée par l'assemblée générale le ______________, et m'engage à le respecter pendant toute la durée du mandat issu de la liste, y compris la procédure disciplinaire qu'il prévoit.
+Je soussigné·e ______________________, investi·e sur la liste du « *Pour une université populaire* » en qualité d'élu·e (titulaire / suppléant·e) pour l'élection ______________________, déclare avoir pris connaissance du règlement intérieur du « *Pour une université populaire* », dans sa version adoptée par l'assemblée générale le ______________, et m'engage à le respecter pendant toute la durée du mandat issu de la liste, y compris la procédure disciplinaire qu'il prévoit.
 
 Fait à ______________, le ______________.
 
