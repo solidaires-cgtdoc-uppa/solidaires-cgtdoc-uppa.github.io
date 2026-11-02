@@ -35,6 +35,41 @@ header p {
 	font-weight: bolder;
 	font-size: clamp(1em, 2.5vw, 1.4em);
 }
+/* Sticker « Élections 2026 » */
+.badge {
+    display: inline-block;
+    background: #E02130;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: .78em;
+    padding: .45em .9em;
+    border: 2px solid #000;
+    border-radius: .4em;
+    box-shadow: 3px 3px 0 #000;
+    transform: rotate(-6deg);
+    margin-left: .6em;
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: transform .15s ease-in-out;
+}
+.badge:hover {
+    text-decoration: none;   /* neutralise le soulignement global des liens */
+    transform: rotate(-3deg) scale(1.06);
+}
+
+/* Logo qui s'anime doucement au survol */
+header img {
+    transition: transform .2s ease-in-out;
+}
+header img:hover {
+    transform: rotate(-4deg) scale(1.06);
+}
+
+/* Respect des personnes sensibles au mouvement */
+@media (prefers-reduced-motion: reduce) {
+    header img, .badge { transition: none; }
+}
 main h2 {
 	display: inline-block;
 	border-bottom: 4px solid #000;
