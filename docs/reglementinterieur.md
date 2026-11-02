@@ -66,7 +66,7 @@ Charte d'engagement de l'élu·e — « *Pour une université populaire* »
 
 À signer avant toute investiture sur la liste.
 
-Je soussigné·e ______________________, investi·e sur la liste du « *Pour une université populaire* » en qualité d'élu·e (titulaire / suppléant·e) pour l'élection ______________________, déclare avoir pris connaissance du règlement intérieur du « *Pour une université populaire* », dans sa version adoptée par l'assemblée générale le ______________, et m'engage à le respecter pendant toute la durée du mandat issu de la liste, y compris la procédure disciplinaire qu'il prévoit.
+Je soussigné·e ______________________, investi·e sur la liste du « *Pour une université populaire* » en qualité d'élu·e (titulaire / suppléant·e) pour l'élection ______________________, déclare avoir pris connaissance du règlement intérieur du « *Pour une université populaire* », et m'engage à le respecter pendant toute la durée du mandat issu de la liste, y compris la procédure disciplinaire qu'il prévoit.
 
 Fait à ______________, le ______________.
 
