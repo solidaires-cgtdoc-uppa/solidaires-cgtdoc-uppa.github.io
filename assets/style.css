@@ -107,6 +107,17 @@ img {
 .listes h2 {
 	margin-top: 2.5em;
 }
+.colonnes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+.colonnes > section {
+    flex: 1 1 0;
+    min-width: 290px;
+}
 .partenaires {
 	display: flex;
 	flex-direction: row;
