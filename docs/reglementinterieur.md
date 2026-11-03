@@ -50,6 +50,7 @@ Les élu·e·s et suppléant·e·s étudiant·e·s s'engagent à représenter fi
   - **En cas de récidive ou de manquement grave** : **retrait du soutien du collectif** pour la suite de la mandature, prononcé en AG à la majorité qualifiée de l'article 2, point 9, la mesure figurant à l'ordre du jour, avec un droit de défense garanti (écrit et/ou oral) à l'élu·e concerné·e, qui ne participe pas au vote, pas plus que son organisation de rattachement le cas échéant.
 
    Le retrait du soutien emporte : le retrait de la communication et de la logistique du collectif, la perte de l'accès aux outils et documentation mutualisés, et la non-investiture aux élections suivantes. Il ne remet pas en cause le mandat électoral en cours, que la loi ne permet pas de révoquer.
+   
 6. **Suppléant·e·s.** Les suppléant·e·s sont soumis·e·s aux mêmes devoirs dès leur désignation sur la liste. En cas de vacance du siège, le/la suppléant·e devenu·e titulaire est pleinement soumis·e au présent article.
 
 ## Article 4 — Révision et durée
