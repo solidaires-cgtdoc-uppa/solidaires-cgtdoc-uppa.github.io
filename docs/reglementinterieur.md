@@ -1,6 +1,6 @@
 # Règlement intérieur du « *Pour une université populaire* »
 
-Adopté par l'assemblée générale le \_\_\_\_\_\_\_\_\_\_\_\_\_\_.
+Adopté le 3 novembre 2026.
 
 ## Article 1 — Préambule
 
@@ -56,9 +56,6 @@ Les élu·e·s et suppléant·e·s étudiant·e·s s'engagent à représenter fi
 
 1. Le présent règlement intérieur peut être modifié par l'AG, à la majorité qualifiée de l'article 2, point 9, la modification figurant expressément à l'ordre du jour.
 2. Il s'applique pendant toute la durée des mandats issus de la liste, jusqu'à son terme ou sa révision.
-
-Fait à Pau, adopté par l'assemblée générale du « *Pour une université populaire* ».
-
 
 ---
 
