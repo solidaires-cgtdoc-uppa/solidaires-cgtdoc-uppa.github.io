@@ -273,9 +273,35 @@
 	/* ===== Mode massicot : 2 tracts complets par feuille A4 =====
 	   Activé par le bouton de la barre d'aide (le script construit
 	   une zone d'impression : recto ×2 puis verso ×2 par feuille). */
-	@page massicot { size: A4 landscape; margin: 0; }
+	page massicot { size: A4 portrait; margin: 0; }
 
-	#massicot-zone { display: none; } /* zone construite par le script, imprimée uniquement */
+	#massicot-zone .a4page {
+		page: massicot;
+		width: 210mm;
+		height: 297mm;
+		break-after: page;
+	}
+	#massicot-zone .a4page:last-child { break-after: auto; }
+	#massicot-zone .slot {
+		position: relative;
+		width: 210mm;
+		height: 148.5mm;
+		overflow: hidden;
+	}
+	#massicot-zone .sheet {
+		display: flex; /* conserve l'agencement interne du gabarit */
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 148mm;
+		height: 210mm;
+		transform: translate(-50%, -50%) rotate(90deg); /* A5 mis sur le flanc */
+		overflow: hidden; /* au massicot, chaque A5 doit tenir sur sa page */
+		margin: 0;
+		box-shadow: none;
+		break-after: auto;
+		break-inside: avoid;
+	}
 
 	.toolbar button {
 		font: inherit;
