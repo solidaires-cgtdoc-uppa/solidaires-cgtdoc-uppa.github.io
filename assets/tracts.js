@@ -13,16 +13,16 @@ function marquerDépassements() {
 window.addEventListener('load', marquerDépassements);
 window.addEventListener('resize', marquerDépassements);
 
-// Mode massicot : 2 tracts complets par feuille A4 portrait.
+// Mode massicot : 2 tracts complets par feuille A4 PAYSAGE.
 // Construit une zone d'impression avec le recto ×2 puis le verso ×2,
-// chaque A5 tourné à 90° dans son emplacement (coupe horizontale au milieu).
+// deux A5 posés droits côte à côte par planche (coupe verticale au milieu).
 const btnMassicot = document.getElementById('btn-massicot');
 if (btnMassicot) {
     btnMassicot.addEventListener('click', function () {
         const on = document.body.classList.toggle('massicot');
         btnMassicot.classList.toggle('on', on);
         btnMassicot.textContent = on
-            ? 'Massicot activé — vérifiez : A4 portrait, marges aucune, 100 %, bord long'
+            ? 'Massicot activé — vérifiez : A4 paysage, marges aucune, 100 %, bord court'
             : 'Mode massicot : 2 tracts par A4';
         const ancienne = document.getElementById('massicot-zone');
         if (ancienne) { ancienne.remove(); }
