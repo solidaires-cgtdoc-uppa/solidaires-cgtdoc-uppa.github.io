@@ -21,7 +21,7 @@
 		const on = document.body.classList.toggle('massicot');
 		btnMassicot.classList.toggle('on', on);
 		btnMassicot.textContent = on
-			? 'Massicot activé : l\u2019impression sortira en A4'
+			? 'Massicot activé \u2014 v\u00e9rifiez : A4 PAYSAGE, marges aucune, 100 %'
 			: 'Mode massicot : 2 tracts par A4';
 		const ancienne = document.getElementById('massicot-zone');
 		if (ancienne) { ancienne.remove(); }
@@ -40,4 +40,3 @@
 			document.body.appendChild(zone);
 		}
 	});
-
