@@ -1,0 +1,238 @@
+/* Les polices de la charte se chargeront en local (aperçu ici en polices système) */
+	@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Montserrat:wght@700&display=swap');
+
+	:root {
+		--encre: #383E4B;
+		--noir: #000;
+		--rouge: #E02130;
+	}
+
+	/* ===== Feuilles A5 : 148 × 210 mm ===== */
+	@page {
+		size: A5 portrait;
+		margin: 0;
+	}
+
+	* { box-sizing: border-box; }
+
+	body {
+		margin: 0;
+		background: #565b66;
+		font-family: 'Arimo', system-ui, sans-serif;
+		color: var(--encre);
+		line-height: 1.3;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	h1, h2, h3 {
+		font-family: 'Montserrat', 'Arial Black', system-ui, sans-serif;
+		font-weight: 700;
+		margin: 0;
+	}
+
+	.sheet {
+		width: 148mm;
+		--page-h: 209.5mm; /* hauteur utile d'une page A5 */
+		/* min-height au lieu de height : si le contenu déborde, la feuille
+		   grandit à l'écran et se fragmente sur une nouvelle page à l'impression */
+		min-height: var(--page-h);
+		background: #fff;
+		margin: 10mm auto;
+		padding: 7mm;
+		box-shadow: 0 6px 22px rgba(0,0,0,.45);
+		overflow: visible; /* plus de contenu masqué */
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5mm;
+	}
+
+	/* Quand un bloc traverse un saut de page, chaque fragment (chaque page
+	   imprimée) récupère la bordure, le fond et la marge interne : on obtient
+	   une véritable « nouvelle page » au même gabarit. */
+	.sheet,
+	.bloc,
+	.date-clé {
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+	}
+
+	/* ===== Indicateur de dépassement (écran uniquement) =====
+	   Si une feuille dépasse une page A5 : ligne rouge à la limite de page,
+	   zone excédentaire rosée + étiquette explicative.
+	   La classe .overflows est ajoutée par le petit script en bas de page. */
+	@media screen {
+		.sheet.overflows::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 5;
+			pointer-events: none;
+			background:
+				repeating-linear-gradient(to bottom,
+					transparent 0, transparent calc(var(--page-h) - 2px),
+					rgba(224,33,48,.85) calc(var(--page-h) - 2px), rgba(224,33,48,.85) var(--page-h)),
+				linear-gradient(to bottom,
+					transparent 0, transparent var(--page-h),
+					rgba(224,33,48,.07) var(--page-h), rgba(224,33,48,.07) 100%);
+		}
+		.sheet.overflows::after {
+			content: "↓ contenu sous cette ligne : passe sur une page supplémentaire";
+			position: absolute;
+			top: calc(var(--page-h) + 2mm);
+			left: 2mm;
+			z-index: 6;
+			background: var(--rouge);
+			color: #fff;
+			font-size: 8pt;
+			padding: 1px 2mm;
+			border-radius: 3px;
+			box-shadow: 1px 1px 0 #000;
+		}
+	}
+
+	/* ===== Barre d'aide (visible uniquement à l'écran) ===== */
+	.toolbar {
+		max-width: 148mm;
+		margin: 10mm auto 0;
+		background: #fff;
+		border: 2px solid #000;
+		border-radius: 6px;
+		padding: 8px 12px;
+		font-size: 13px;
+	}
+	.toolbar b { font-family: 'Montserrat', sans-serif; }
+
+	/* ===== Motifs de la charte ===== */
+	.badge {
+		display: inline-block;
+		background: var(--rouge);
+		color: #fff;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 9pt;
+		padding: 3px 8px;
+		border: 2px solid #000;
+		border-radius: 5px;
+		box-shadow: 2px 2px 0 #000;
+		transform: rotate(-6deg);
+		white-space: nowrap;
+	}
+
+	.bloc {
+		border: 2px solid #000;
+		border-radius: 4px;
+		padding: 2.5mm 4mm;
+	}
+	.bloc--gris {
+		background: #f3f3f3;
+		font-size: 9.5pt;
+	}
+
+	.sheet h2 {
+		font-size: 11.5pt;
+		border-bottom: 3px solid #000;
+		padding-bottom: .8mm;
+		margin-bottom: 1.5mm;
+	}
+
+	/* En-tête du recto */
+	.tract-header {
+		display: flex;
+		align-items: center;
+		gap: 4mm;
+	}
+	.tract-header h1 {
+		font-size: 15.5pt;
+		line-height: 1.15;
+	}
+	.tract-header .slogan {
+		margin: .5mm 0 0;
+		font-size: 8.5pt;
+		font-style: italic;
+	}
+	.logo-slot {
+		flex: none;
+		width: 24mm;
+		height: 24mm;
+		border: 2px dashed #999;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #999;
+		font-size: 7pt;
+		text-align: center;
+	}
+	.col {
+		column-width: 10em;
+		column-rule: 1px solid rgb(75 70 74);
+	}
+	.col p { margin: 1mm 0 .5mm; }
+	.col ul { margin: 0 0 1mm; padding-left: 4.5mm; }
+	.col li { margin: 0 0 .8mm; }
+	/* Texte indicatif à remplacer */
+	.placeholder { color: #8a8f9c; font-style: italic; }
+	p { margin: 0; }
+
+	.tract-footer {
+		margin-top: auto;
+		border-top: 2px solid #000;
+		padding-top: 1.5mm;
+		font-size: 7pt;
+		text-align: center;
+	}
+
+	/* Verso : étapes de vote */
+	.steps {
+		margin: 0;
+		padding-left: 6mm;
+		font-size: 9pt;
+		display: flex;
+		flex-direction: column;
+		gap: 2mm;
+	}
+	.steps b { font-family: 'Montserrat', sans-serif; }
+
+	.contact-grid {
+		display: flex;
+		gap: 3mm;
+	}
+	.contact-grid .bloc { flex: 1; font-size: 8pt; }
+	.contact-grid h3 {
+		font-size: 9pt;
+		margin-bottom: 1mm;
+	}
+
+	.date-clé {
+		background: var(--rouge);
+		color: #fff;
+		border: 2px solid #000;
+		border-radius: 4px;
+		padding: 1.5mm 3mm;
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 8.5pt;
+	}
+
+	/* ===== Impression ===== */
+	@media print {
+		body { background: #fff; }
+		.toolbar { display: none; }
+		.sheet {
+			/* display:block : le contenu peut se fragmenter librement
+			   sur autant de pages A5 que nécessaire */
+			display: block;
+			margin: 0;
+			box-shadow: none;
+			break-after: page;
+			orphans: 3;
+			widows: 3;
+		}
+		.sheet:last-of-type { break-after: auto; }
+		/* remplace le gap flexbox, indisponible en display:block */
+		.sheet > * + * { margin-top: 2.5mm; }
+		/* jamais d'indicateur de dépassement sur le papier */
+		.sheet::before, .sheet::after { content: none; }
+	}

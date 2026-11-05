@@ -4,184 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Tract A5 — Pour une université populaire</title>
-	<style>
-	/* Les polices de la charte se chargeront en local (aperçu ici en polices système) */
-	@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Montserrat:wght@700&display=swap');
-
-	:root {
-		--encre: #383E4B;
-		--noir: #000;
-		--rouge: #E02130;
-	}
-
-	/* ===== Feuilles A5 : 148 × 210 mm ===== */
-	@page {
-		size: A5 portrait;
-		margin: 0;
-	}
-
-	* { box-sizing: border-box; }
-
-	body {
-		margin: 0;
-		background: #565b66;
-		font-family: 'Arimo', system-ui, sans-serif;
-		color: var(--encre);
-		line-height: 1.4;
-		-webkit-print-color-adjust: exact;
-		print-color-adjust: exact;
-	}
-
-	h1, h2, h3 {
-		font-family: 'Montserrat', 'Arial Black', system-ui, sans-serif;
-		font-weight: 700;
-		margin: 0;
-	}
-
-	.sheet {
-		width: 148mm;
-		/* légèrement < 210 mm pour éviter qu'un arrondi de pixels ne crée une 3ᵉ page blanche */
-		height: 209.5mm;
-		background: #fff;
-		margin: 10mm auto;
-		padding: 9mm;
-		box-shadow: 0 6px 22px rgba(0,0,0,.45);
-		overflow: hidden;
-		display: flex;
-		flex-direction: column;
-		gap: 4mm;
-	}
-
-	/* ===== Barre d'aide (visible uniquement à l'écran) ===== */
-	.toolbar {
-		max-width: 148mm;
-		margin: 10mm auto 0;
-		background: #fff;
-		border: 2px solid #000;
-		border-radius: 6px;
-		padding: 8px 12px;
-		font-size: 13px;
-	}
-	.toolbar b { font-family: 'Montserrat', sans-serif; }
-
-	/* ===== Motifs de la charte ===== */
-	.badge {
-		display: inline-block;
-		background: var(--rouge);
-		color: #fff;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 700;
-		font-size: 9pt;
-		padding: 3px 8px;
-		border: 2px solid #000;
-		border-radius: 5px;
-		box-shadow: 2px 2px 0 #000;
-		transform: rotate(-6deg);
-		white-space: nowrap;
-	}
-
-	.bloc {
-		border: 2px solid #000;
-		border-radius: 4px;
-		padding: 4mm 5mm;
-	}
-	.bloc--gris {
-		background: #f3f3f3;
-		font-size: 10pt;
-	}
-
-	.sheet h2 {
-		font-size: 12.5pt;
-		border-bottom: 3px solid #000;
-		padding-bottom: 1mm;
-		margin-bottom: 2mm;
-	}
-
-	/* En-tête du recto */
-	.tract-header {
-		display: flex;
-		align-items: center;
-		gap: 4mm;
-	}
-	.tract-header h1 {
-		font-size: 15.5pt;
-		line-height: 1.15;
-	}
-	.tract-header .slogan {
-		margin: 1mm 0 0;
-		font-size: 9pt;
-		font-style: italic;
-	}
-	.logo-slot {
-		flex: none;
-		width: 24mm;
-		height: 24mm;
-		border: 2px dashed #999;
-		border-radius: 4px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: #999;
-		font-size: 7pt;
-		text-align: center;
-	}
-
-	/* Texte indicatif à remplacer */
-	.placeholder { color: #8a8f9c; font-style: italic; }
-	p { margin: 0; }
-
-	.tract-footer {
-		margin-top: auto;
-		border-top: 2px solid #000;
-		padding-top: 2mm;
-		font-size: 7.5pt;
-		text-align: center;
-	}
-
-	/* Verso : étapes de vote */
-	.steps {
-		margin: 0;
-		padding-left: 6mm;
-		font-size: 9pt;
-		display: flex;
-		flex-direction: column;
-		gap: 2mm;
-	}
-	.steps b { font-family: 'Montserrat', sans-serif; }
-
-	.contact-grid {
-		display: flex;
-		gap: 3mm;
-	}
-	.contact-grid .bloc { flex: 1; font-size: 8.5pt; }
-	.contact-grid h3 {
-		font-size: 9.5pt;
-		margin-bottom: 1.5mm;
-	}
-
-	.date-clé {
-		background: var(--rouge);
-		color: #fff;
-		border: 2px solid #000;
-		border-radius: 4px;
-		padding: 2mm 3mm;
-		text-align: center;
-		font-family: 'Montserrat', sans-serif;
-		font-size: 9pt;
-	}
-
-	/* ===== Impression ===== */
-	@media print {
-		body { background: #fff; }
-		.toolbar { display: none; }
-		.sheet {
-			margin: 0;
-			box-shadow: none;
-			break-after: page;
-		}
-		.sheet:last-of-type { break-after: auto; }
-	}
-	</style>
+	<link href="../assets/tracts.css" rel="stylesheet">
 </head>
 <body>
 
@@ -210,7 +33,7 @@
 				<p>Nous présentons donc notre liste étudiante Pour une université populaire, portée par Solidaires étudiant·es et le collectif doctorant de la CGT FercSup, pour une vie étudiante digne, pour une université égalitaire et inclusive, pour un service public de qualité, une université durable et une diversité culturelle, pour une recherche pérenne, diversifiée et indépendante. Composé d'étudiant·es engagé·es au quotidien, notre liste est soutenue par la CGT FercSup et la liste UHS. Elle vise à porter notre projet, vos demandes et vos problèmes dans les instances dirigeantes de l'université.</p>
 		</div>
 		<div class="date-clé">
-			<p>Vérifie ton inscription sur elections.univ-pau.fr — avant le vendredi 13 novembre 2026</p>
+			<p>Vérifie ton inscription sur elections.univ-pau.fr avant le vendredi 13 novembre 2026</p>
 		</div>
 		<div class="contact-grid">
 			<div class="bloc">
@@ -247,6 +70,6 @@
 			Pour une université gratuite, émancipatrice, de proximité — Élections UPPA 2026
 		</footer>
 	</section>
-
+<script src="../assets/tracts.js"/></script>
 </body>
 </html>
