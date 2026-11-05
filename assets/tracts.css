@@ -131,8 +131,8 @@
 	}
 
     .bloc--compact {
-        font-size: 9.5pt;
-        line-height: 1.35;
+        font-size: 8pt;
+        line-height: 1.3;
     }
 	.bloc--compact .col {
 		columns: 2;
