@@ -12,10 +12,6 @@
 		--encre: #383E4B;
 		--noir: #000;
 		--rouge: #E02130;
-		--axe1: #482344;
-		--axe2: #2B5166;
-		--axe3: #429867;
-		--axe4: #FAB243;
 	}
 
 	/* ===== Feuilles A5 : 148 × 210 mm ===== */
@@ -89,7 +85,10 @@
 		border-radius: 4px;
 		padding: 4mm 5mm;
 	}
-	.bloc--gris { background: #f3f3f3; }
+	.bloc--gris {
+		background: #f3f3f3;
+		font-size: 10pt;
+	}
 
 	.sheet h2 {
 		font-size: 12.5pt;
@@ -126,39 +125,6 @@
 		font-size: 7pt;
 		text-align: center;
 	}
-
-	/* Bandeaux des axes (couleurs du site) */
-	.axes { display: flex; flex-direction: column; gap: 2.5mm; flex: 1; }
-	.axe-bar {
-		border: 2px solid #000;
-		border-radius: 4px;
-		padding: 2.5mm 3.5mm;
-		color: #fff;
-	}
-	.axe-bar h3 {
-		font-size: 10.5pt;
-		display: flex;
-		align-items: center;
-		gap: 2.5mm;
-	}
-	.axe-bar .num {
-		flex: none;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 5.5mm;
-		height: 5.5mm;
-		border: 1.5pt solid #fff;
-		border-radius: 50%;
-		font-size: 8pt;
-	}
-	.axe-bar p { margin: 1mm 0 0; font-size: 8.5pt; }
-	.axe1 { background: var(--axe1); }
-	.axe2 { background: var(--axe2); }
-	.axe3 { background: var(--axe3); }
-	/* Fond jaune → texte sombre, comme sur le site */
-	.axe4 { background: var(--axe4); color: var(--encre); }
-	.axe4 .num { border-color: var(--encre); }
 
 	/* Texte indicatif à remplacer */
 	.placeholder { color: #8a8f9c; font-style: italic; }
@@ -229,7 +195,7 @@
 	<section class="sheet" id="recto">
 
 		<header class="tract-header">
-			<img src="assets/logo.svg" alt="Liste Pour une université populaire" style="width:24mm">
+			<img src="../assets/logo.svg" alt="Liste Pour une université populaire" style="width:24mm">
 			<div style="flex:1">
 				<h1>Pour une université populaire</h1>
 				<p class="slogan">Université gratuite, émancipatrice, de proximité</p>
@@ -239,28 +205,26 @@
 
 		<div class="bloc bloc--gris">
 			<h2>Qui sommes-nous ?</h2>
-			<p class="placeholder">Deux ou trois phrases pour présenter la liste : qui la porte, pourquoi elle se présente aux conseils de l'UPPA, et ce qu'elle défend. Restez court : le recto accroche, le verso explique le vote.</p>
+			<p>Le 23 et 24 novembre 2026, nous votons pour élire nos représentant⋅es au sein des différents conseils de l’université.</p>
+				<p>Ces instances influencent nos études. Bien que les étudiantes et étudiants y soient peu représentés, ils peuvent y mener des batailles pour protéger ou gagner des droits, ou y obtenir des informations utiles.</p>
+				<p>Nous présentons donc notre liste étudiante Pour une université populaire, portée par Solidaires étudiant·es et le collectif doctorant de la CGT FercSup, pour une vie étudiante digne, pour une université égalitaire et inclusive, pour un service public de qualité, une université durable et une diversité culturelle, pour une recherche pérenne, diversifiée et indépendante. Composé d'étudiant·es engagé·es au quotidien, notre liste est soutenue par la CGT FercSup et la liste UHS. Elle vise à porter notre projet, vos demandes et vos problèmes dans les instances dirigeantes de l'université.</p>
 		</div>
-
-		<div class="axes">
-			<div class="axe-bar axe1">
-				<h3><span class="num">1</span>Vie étudiante digne</h3>
-				<p class="placeholder">Une revendication phare de l'axe, en une ligne.</p>
-			</div>
-			<div class="axe-bar axe2">
-				<h3><span class="num">2</span>Université égalitaire et inclusive</h3>
-				<p class="placeholder">Une revendication phare de l'axe, en une ligne.</p>
-			</div>
-			<div class="axe-bar axe3">
-				<h3><span class="num">3</span>Service public, université durable</h3>
-				<p class="placeholder">Une revendication phare de l'axe, en une ligne.</p>
-			</div>
-			<div class="axe-bar axe4">
-				<h3><span class="num">4</span>Recherche indépendante</h3>
-				<p class="placeholder">Une revendication phare de l'axe, en une ligne.</p>
-			</div>
+		<div class="date-clé">
+			<p>Vérifie ton inscription sur elections.univ-pau.fr — avant le vendredi 13 novembre 2026</p>
 		</div>
-
+		<div class="contact-grid">
+			<div class="bloc">
+				<h3>Sur les réseaux et Internet</h3>
+				<p>Facebook : @XXX</p>
+				<p>Instagram: @XXX</p>
+				<p>Courriel: XXX@univ-pau.fr</p>
+			</div>
+			<div class="bloc">
+				<img src="../assets/qrcode.png" style="width:100px;"/><br>
+				univpop-pau.fr
+			</div>
+			
+		</div>
 		<footer class="tract-footer">
 			Liste portée par Solidaires Étudiant·e·s Pau-Béarn et le collectif doctorant·e·s CGT FercSup —
 			soutenue par la CGT FercSup UPPA et la liste UHS
@@ -270,35 +234,14 @@
 	<!-- ==================== VERSO ==================== -->
 	<section class="sheet" id="verso">
 
-		<h2>Comment voter ?</h2>
-		<ol class="steps">
-			<li class="placeholder">Étape 1 : retrouver le mail « Personnel et confidentiel » sur le mail étudiant.</li>
-			<li class="placeholder">Étape 2 : se connecter sur Neovote avec l'identifiant reçu + numéro étudiant.</li>
-			<li class="placeholder">Étape 3 : générer un mot de passe (mail ou SMS).</li>
-			<li class="placeholder">Étape 4 : voter pour la liste <b>Pour une université populaire</b> — attention, choix définitif.</li>
-			<li class="placeholder">Étape 5 : répéter pour chaque conseil.</li>
-		</ol>
 
-		<div class="date-clé">
-			Vérifie ton inscription sur elections.univ-pau.fr — avant le vendredi 13 novembre 2026
-		</div>
 
 		<div class="bloc bloc--gris" style="flex:1">
 			<h2>Notre profession de foi</h2>
 			<p class="placeholder">Espace pour un court extrait de la profession de foi, un slogan développé ou trois revendications détaillées. Attention à ne pas dépasser la hauteur de la page : tout ce qui dépasse sera coupé à l'impression.</p>
 		</div>
 
-		<div class="contact-grid">
-			<div class="bloc">
-				<h3>Sur les réseaux</h3>
-				<p class="placeholder">Facebook · Instagram · Mail — remplacez par vos liens et @handles.</p>
-			</div>
-			<div class="bloc">
-				<h3>En ligne</h3>
-				<p class="placeholder">Plus d’informations sur notre site internet :<br>
-				Adresse du site de la liste (QR code possible à cet emplacement).</p>
-			</div>
-		</div>
+
 
 		<footer class="tract-footer">
 			Pour une université gratuite, émancipatrice, de proximité — Élections UPPA 2026
