@@ -152,26 +152,8 @@
 		font-size: 8.5pt;
 		font-style: italic;
 	}
-	.logo-slot {
-		flex: none;
-		width: 24mm;
-		height: 24mm;
-		border: 2px dashed #999;
-		border-radius: 4px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: #999;
-		font-size: 7pt;
-		text-align: center;
-	}
-	.col {
-		column-width: 10em;
-		column-rule: 1px solid rgb(75 70 74);
-	}
-	.col p { margin: 1mm 0 .5mm; }
-	.col ul { margin: 0 0 1mm; padding-left: 4.5mm; }
-	.col li { margin: 0 0 .8mm; }
+	.li { margin: 0 0 .8mm; }
+	 ul { margin: 0 0 1mm; padding-left: 3mm; }
 	/* Texte indicatif à remplacer */
 	.placeholder { color: #8a8f9c; font-style: italic; }
 	p { margin: 0; }
