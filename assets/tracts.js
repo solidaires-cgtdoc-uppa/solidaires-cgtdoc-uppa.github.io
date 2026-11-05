@@ -13,3 +13,31 @@
 	window.addEventListener('load', marquerDépassements);
 	window.addEventListener('resize', marquerDépassements);
 
+	// Mode massicot : 2 tracts complets par feuille A4.
+	// Construit une zone d'impression avec le recto ×2 puis le verso ×2,
+	// disposés en planches A4 paysage (une par page imprimée).
+	const btnMassicot = document.getElementById('btn-massicot');
+	btnMassicot.addEventListener('click', function () {
+		const on = document.body.classList.toggle('massicot');
+		btnMassicot.classList.toggle('on', on);
+		btnMassicot.textContent = on
+			? 'Massicot activé : l\u2019impression sortira en A4'
+			: 'Mode massicot : 2 tracts par A4';
+		const ancienne = document.getElementById('massicot-zone');
+		if (ancienne) { ancienne.remove(); }
+		if (on) {
+			const zone = document.createElement('div');
+			zone.id = 'massicot-zone';
+			[['recto', 'recto'], ['verso', 'verso']].forEach(function (groupe) {
+				const planche = document.createElement('div');
+				planche.className = 'a4page';
+				groupe.forEach(function (id) {
+					planche.appendChild(document.getElementById(id).cloneNode(true));
+				});
+				zone.appendChild(planche);
+			});
+			zone.querySelectorAll('[id]').forEach(function (el) { el.removeAttribute('id'); });
+			document.body.appendChild(zone);
+		}
+	});
+
