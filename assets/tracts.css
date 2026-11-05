@@ -130,12 +130,10 @@
 		font-size: 9.5pt;
 	}
 
-	/* Bloc dense (verso) : resserré pour faire tenir un long programme sur une page.
-	   Si le contenu déborde encore, descendre font-size à 7pt. */
-	.bloc--compact {
-		font-size: 8pt;
-		line-height: 1.3;
-	}
+    .bloc--compact {
+        font-size: 9.5pt;
+        line-height: 1.35;
+    }
 	.bloc--compact .col {
 		columns: 2;
 		column-gap: 5mm;
