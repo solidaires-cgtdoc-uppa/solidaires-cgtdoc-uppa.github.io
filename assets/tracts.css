@@ -289,8 +289,13 @@
    Principe SANS ROTATION : une planche A4 paysage porte deux A5 posés
    droits côte à côte (recto ×2 puis verso ×2), coupe verticale au milieu,
    recto-verso « bord court ». Aucun transform ni positionnement absolu :
-   uniquement du flux normal, fiable à l'impression. */
-@page massicot { size: A4 landscape; margin: 0; }
+   uniquement du flux normal, fiable à l'impression.
+   Le format A4 paysage est déclaré dans le bloc <style id="page-massicot">
+   du HTML, que le script n'active qu'en mode massicot : chaque impression
+   n'utilise ainsi qu'UNE SEULE taille de page. (Le format des pages
+   nommées « @page massicot » était ignoré par Firefox, qui imprimait
+   les planches réduites sur du A5 portrait.)
+*/
 
 #massicot-zone { display: none; } /* zone construite par le script */
 
@@ -300,7 +305,6 @@
 	body.massicot #massicot-zone { display: block; }
 	/* une planche = une page A4 paysage (297 × 210 mm) */
 	#massicot-zone .a4page {
-		page: massicot;
 		display: flex;
 		width: 297mm;
 		height: 210mm;

@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Tract A5 — Pour une université populaire</title>
 	<link href="../assets/tracts.css" rel="stylesheet">
+	<style id="page-massicot" media="not print">
+		/* Activé par le script en mode massicot uniquement : planches A4 paysage. */
+		@page { size: A4 landscape; margin: 0; }
+	</style>
 </head>
 <body>
 
@@ -16,10 +20,11 @@
 		à l'écran, une <b style="color:#E02130">ligne rouge</b> marque la limite de la page A5 et rosit la zone qui débordera (ce repère n'est jamais imprimé).
 		<br><br>
 		<button type="button" id="btn-massicot">Mode massicot : 2 tracts par A4</button>
-		→ recto ×2 puis verso ×2 par feuille A4 <b>portrait</b> (A5 tournés à 90°, coupe horizontale au milieu),
+		→ recto ×2 puis verso ×2 par feuille A4 <b>paysage</b> (2 A5 côte à côte, coupe verticale au milieu),
 soit <b>2 tracts complets</b> :
-cliquez (le bouton passe en rouge), puis <b>Ctrl+P</b> · papier <b>A4</b> · marges <b>aucune</b> ·
-pages par feuille <b>1</b> · recto-verso <b>reliure bord long</b>.
+cliquez (le bouton passe en rouge), les planches s'affichent à l'écran pour contrôle, puis <b>Ctrl+P</b> ·
+papier <b>A4</b> · orientation <b>paysage</b> · marges <b>aucune</b> · échelle <b>100 %</b> ·
+pages par feuille <b>1</b> · recto-verso <b>reliure bord court</b>.
 	</div>
 
 
@@ -67,10 +72,7 @@ pages par feuille <b>1</b> · recto-verso <b>reliure bord long</b>.
 
 	<!-- ==================== VERSO ==================== -->
 	<section class="sheet" id="verso">
-
-
-
-		<div class="bloc bloc--gris bloc--compact" style="flex:1;">
+		<div class="bloc bloc--gris bloc--compact" style="flex:1">
 			<h2>Pour une recherche pérenne, diversifiée et indépendante</h2>
 			<p>Depuis plusieurs décennies, l'université et la recherche se néolibéralisent : la concurrence pour des postes précaires dégrade la santé physique et mentale des chercheur·ses, ainsi que leur temps de recherche et leur vie personnelle et familiale. Pour sortir les doctorant·es et les docteur·es de la précarité, l'université doit prendre des mesures concrètes.</p>
 		<div class="col">
@@ -98,9 +100,9 @@ pages par feuille <b>1</b> · recto-verso <b>reliure bord long</b>.
 				<li>Une vigilance sur la mise en place de conditions de travail dignes : de nombreux contractuel·les et nouvelles personnes recrutées se retrouvent sans poste de travail fixe, sans matériel pour travailler, avec de fortes disparités de traitement entre collègues et entre disciplines.</li>
 				<li>La prévention des risques pour la santé au travail, notamment ceux associés au burn-out.</li>
 			</ul>
-			</div>
 		</div>
 	</section>
-		<script src="../assets/tracts.js"/></script>
+<script src="../assets/tracts.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" nonce="8q0hM38zXpXrqwPRsJyJoQ==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
