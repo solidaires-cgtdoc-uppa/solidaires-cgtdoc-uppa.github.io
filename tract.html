@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tract A5 — Pour une université populaire</title>
+	<style>
+	/* Les polices de la charte se chargeront en local (aperçu ici en polices système) */
+	@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Montserrat:wght@700&display=swap');
+
+	:root {
+		--encre: #383E4B;
+		--noir: #000;
+		--rouge: #E02130;
+		--axe1: #482344;
+		--axe2: #2B5166;
+		--axe3: #429867;
+		--axe4: #FAB243;
+	}
+
+	/* ===== Feuilles A5 : 148 × 210 mm ===== */
+	@page {
+		size: A5 portrait;
+		margin: 0;
+	}
+
+	* { box-sizing: border-box; }
+
+	body {
+		margin: 0;
+		background: #565b66;
+		font-family: 'Arimo', system-ui, sans-serif;
+		color: var(--encre);
+		line-height: 1.4;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	h1, h2, h3 {
+		font-family: 'Montserrat', 'Arial Black', system-ui, sans-serif;
+		font-weight: 700;
+		margin: 0;
+	}
+
+	.sheet {
+		width: 148mm;
+		/* légèrement < 210 mm pour éviter qu'un arrondi de pixels ne crée une 3ᵉ page blanche */
+		height: 209.5mm;
+		background: #fff;
+		margin: 10mm auto;
+		padding: 9mm;
+		box-shadow: 0 6px 22px rgba(0,0,0,.45);
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		gap: 4mm;
+	}
+
+	/* ===== Barre d'aide (visible uniquement à l'écran) ===== */
+	.toolbar {
+		max-width: 148mm;
+		margin: 10mm auto 0;
+		background: #fff;
+		border: 2px solid #000;
+		border-radius: 6px;
+		padding: 8px 12px;
+		font-size: 13px;
+	}
+	.toolbar b { font-family: 'Montserrat', sans-serif; }
+
+	/* ===== Motifs de la charte ===== */
+	.badge {
+		display: inline-block;
+		background: var(--rouge);
+		color: #fff;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 9pt;
+		padding: 3px 8px;
+		border: 2px solid #000;
+		border-radius: 5px;
+		box-shadow: 2px 2px 0 #000;
+		transform: rotate(-6deg);
+		white-space: nowrap;
+	}
+
+	.bloc {
+		border: 2px solid #000;
+		border-radius: 4px;
+		padding: 4mm 5mm;
+	}
+	.bloc--gris { background: #f3f3f3; }
+
+	.sheet h2 {
+		font-size: 12.5pt;
+		border-bottom: 3px solid #000;
+		padding-bottom: 1mm;
+		margin-bottom: 2mm;
+	}
+
+	/* En-tête du recto */
+	.tract-header {
+		display: flex;
+		align-items: center;
+		gap: 4mm;
+	}
+	.tract-header h1 {
+		font-size: 15.5pt;
+		line-height: 1.15;
+	}
+	.tract-header .slogan {
+		margin: 1mm 0 0;
+		font-size: 9pt;
+		font-style: italic;
+	}
+	.logo-slot {
+		flex: none;
+		width: 24mm;
+		height: 24mm;
+		border: 2px dashed #999;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #999;
+		font-size: 7pt;
+		text-align: center;
+	}
+
+	/* Bandeaux des axes (couleurs du site) */
+	.axes { display: flex; flex-direction: column; gap: 2.5mm; flex: 1; }
+	.axe-bar {
+		border: 2px solid #000;
+		border-radius: 4px;
+		padding: 2.5mm 3.5mm;
+		color: #fff;
+	}
+	.axe-bar h3 {
+		font-size: 10.5pt;
+		display: flex;
+		align-items: center;
+		gap: 2.5mm;
+	}
+	.axe-bar .num {
+		flex: none;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 5.5mm;
+		height: 5.5mm;
+		border: 1.5pt solid #fff;
+		border-radius: 50%;
+		font-size: 8pt;
+	}
+	.axe-bar p { margin: 1mm 0 0; font-size: 8.5pt; }
+	.axe1 { background: var(--axe1); }
+	.axe2 { background: var(--axe2); }
+	.axe3 { background: var(--axe3); }
+	/* Fond jaune → texte sombre, comme sur le site */
+	.axe4 { background: var(--axe4); color: var(--encre); }
+	.axe4 .num { border-color: var(--encre); }
+
+	/* Texte indicatif à remplacer */
+	.placeholder { color: #8a8f9c; font-style: italic; }
+	p { margin: 0; }
+
+	.tract-footer {
+		margin-top: auto;
+		border-top: 2px solid #000;
+		padding-top: 2mm;
+		font-size: 7.5pt;
+		text-align: center;
+	}
+
+	/* Verso : étapes de vote */
+	.steps {
+		margin: 0;
+		padding-left: 6mm;
+		font-size: 9pt;
+		display: flex;
+		flex-direction: column;
+		gap: 2mm;
+	}
+	.steps b { font-family: 'Montserrat', sans-serif; }
+
+	.contact-grid {
+		display: flex;
+		gap: 3mm;
+	}
+	.contact-grid .bloc { flex: 1; font-size: 8.5pt; }
+	.contact-grid h3 {
+		font-size: 9.5pt;
+		margin-bottom: 1.5mm;
+	}
+
+	.date-clé {
+		background: var(--rouge);
+		color: #fff;
+		border: 2px solid #000;
+		border-radius: 4px;
+		padding: 2mm 3mm;
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 9pt;
+	}
+
+	/* ===== Impression ===== */
+	@media print {
+		body { background: #fff; }
+		.toolbar { display: none; }
+		.sheet {
+			margin: 0;
+			box-shadow: none;
+			break-after: page;
+		}
+		.sheet:last-of-type { break-after: auto; }
+	}
+	</style>
+</head>
+<body>
+
+	<div class="toolbar">
+		<b>Modèle de tract A5 recto-verso.</b>
+		Éditez les textes directement dans le HTML (les passages en <i>italique gris</i> sont à remplacer),
+		puis : <b>Ctrl+P</b> → papier <b>A5</b> · marges <b>aucune</b> · cocher <b>« Graphiques d'arrière-plan »</b> · recto-verso <b>reliure bord long</b>.
+	</div>
+
+	<!-- ==================== RECTO ==================== -->
+	<section class="sheet" id="recto">
+
+		<header class="tract-header">
+			<img src="assets/logo.svg" alt="Liste Pour une université populaire" style="width:24mm">
+			<div style="flex:1">
+				<h1>Pour une université populaire</h1>
+				<p class="slogan">Université gratuite, émancipatrice, de proximité</p>
+			</div>
+			<span class="badge">Élections 2026</span>
+		</header>
+
+		<div class="bloc bloc--gris">
+			<h2>Qui sommes-nous ?</h2>
+			<p class="placeholder">Deux ou trois phrases pour présenter la liste : qui la porte, pourquoi elle se présente aux conseils de l'UPPA, et ce qu'elle défend. Restez court : le recto accroche, le verso explique le vote.</p>
+		</div>
+
+		<div class="axes">
+			<div class="axe-bar axe1">
+				<h3><span class="num">1</span>Vie étudiante digne</h3>
+				<p class="placeholder">Une revendication phare de l'axe, en une ligne.</p>
+			</div>
+			<div class="axe-bar axe2">
+				<h3><span class="num">2</span>Université égalitaire et inclusive</h3>
+				<p class="placeholder">Une revendication phare de l'axe, en une ligne.</p>
+			</div>
+			<div class="axe-bar axe3">
+				<h3><span class="num">3</span>Service public, université durable</h3>
+				<p class="placeholder">Une revendication phare de l'axe, en une ligne.</p>
+			</div>
+			<div class="axe-bar axe4">
+				<h3><span class="num">4</span>Recherche indépendante</h3>
+				<p class="placeholder">Une revendication phare de l'axe, en une ligne.</p>
+			</div>
+		</div>
+
+		<footer class="tract-footer">
+			Liste portée par Solidaires Étudiant·e·s Pau-Béarn et le collectif doctorant·e·s CGT FercSup —
+			soutenue par la CGT FercSup UPPA et la liste UHS
+		</footer>
+	</section>
+
+	<!-- ==================== VERSO ==================== -->
+	<section class="sheet" id="verso">
+
+		<h2>Comment voter ?</h2>
+		<ol class="steps">
+			<li class="placeholder">Étape 1 : retrouver le mail « Personnel et confidentiel » sur le mail étudiant.</li>
+			<li class="placeholder">Étape 2 : se connecter sur Neovote avec l'identifiant reçu + numéro étudiant.</li>
+			<li class="placeholder">Étape 3 : générer un mot de passe (mail ou SMS).</li>
+			<li class="placeholder">Étape 4 : voter pour la liste <b>Pour une université populaire</b> — attention, choix définitif.</li>
+			<li class="placeholder">Étape 5 : répéter pour chaque conseil.</li>
+		</ol>
+
+		<div class="date-clé">
+			Vérifie ton inscription sur elections.univ-pau.fr — avant le vendredi 13 novembre 2026
+		</div>
+
+		<div class="bloc bloc--gris" style="flex:1">
+			<h2>Notre profession de foi</h2>
+			<p class="placeholder">Espace pour un court extrait de la profession de foi, un slogan développé ou trois revendications détaillées. Attention à ne pas dépasser la hauteur de la page : tout ce qui dépasse sera coupé à l'impression.</p>
+		</div>
+
+		<div class="contact-grid">
+			<div class="bloc">
+				<h3>Sur les réseaux</h3>
+				<p class="placeholder">Facebook · Instagram · Mail — remplacez par vos liens et @handles.</p>
+			</div>
+			<div class="bloc">
+				<h3>En ligne</h3>
+				<p class="placeholder">Plus d’informations sur notre site internet :<br>
+				Adresse du site de la liste (QR code possible à cet emplacement).</p>
+			</div>
+		</div>
+
+		<footer class="tract-footer">
+			Pour une université gratuite, émancipatrice, de proximité — Élections UPPA 2026
+		</footer>
+	</section>
+
+</body>
+</html>
