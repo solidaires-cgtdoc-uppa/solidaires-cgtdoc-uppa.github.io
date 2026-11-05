@@ -270,75 +270,45 @@
 		.sheet::before, .sheet::after { content: none; }
 	}
 
-	/* ===== Mode massicot : 2 tracts complets par feuille A4 =====
-	   Activé par le bouton de la barre d'aide (le script construit
-	   une zone d'impression : recto ×2 puis verso ×2 par feuille). */
-	page massicot { size: A4 portrait; margin: 0; }
+/* ===== Mode massicot : 2 tracts complets par feuille A4 portrait =====
+   Recto ×2 puis verso ×2, chaque A5 tourné à 90° dans son emplacement.
+   Coupe horizontale au milieu de la feuille. */
+@page massicot { size: A4 portrait; margin: 0; }
 
-	#massicot-zone .a4page {
-		page: massicot;
-		width: 210mm;
-		height: 297mm;
-		break-after: page;
-	}
-	#massicot-zone .a4page:last-child { break-after: auto; }
-	#massicot-zone .slot {
-		position: relative;
-		width: 210mm;
-		height: 148.5mm;
-		overflow: hidden;
-	}
-	#massicot-zone .sheet {
-		display: flex; /* conserve l'agencement interne du gabarit */
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 148mm;
-		height: 210mm;
-		transform: translate(-50%, -50%) rotate(90deg); /* A5 mis sur le flanc */
-		overflow: hidden; /* au massicot, chaque A5 doit tenir sur sa page */
-		margin: 0;
-		box-shadow: none;
-		break-after: auto;
-		break-inside: avoid;
-	}
+#massicot-zone { display: none; } /* zone construite par le script, imprimée uniquement */
 
-	.toolbar button {
-		font: inherit;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 700;
-		background: #fff;
-		border: 2px solid #000;
-		border-radius: 5px;
-		padding: 2px 10px;
-		cursor: pointer;
-		box-shadow: 2px 2px 0 #000;
-	}
-	.toolbar button.on { background: var(--rouge); color: #fff; }
-
-	@media print {
-		/* les feuilles A5 originales laissent place aux planches A4 */
-		body.massicot > .sheet { display: none; }
-		body.massicot #massicot-zone { display: block; }
-		/* une planche = une page A4 paysage (page nommée) */
-		#massicot-zone .a4page {
-			page: massicot;
-			display: flex;
-			justify-content: center;
-			width: 297mm;
-			height: 210mm;
-			break-after: page;
-		}
-		#massicot-zone .a4page:last-child { break-after: auto; }
-		#massicot-zone .sheet {
-			display: flex; /* conserve l'agencement interne du gabarit */
-			width: 148mm;
-			height: 210mm;
-			overflow: hidden; /* au massicot, chaque A5 doit tenir sur sa page */
-			margin: 0;
-			box-shadow: none;
-			break-after: auto;
-			break-inside: avoid;
-		}
-		#massicot-zone .sheet + .sheet { margin-left: 1mm; }
-	}
+@media print {
+    /* les feuilles A5 originales laissent place aux planches A4 */
+    body.massicot > .sheet { display: none; }
+    body.massicot #massicot-zone { display: block; }
+    /* une planche = une page A4 portrait */
+    #massicot-zone .a4page {
+        page: massicot;
+        width: 210mm;
+        height: 297mm;
+        break-after: page;
+    }
+    #massicot-zone .a4page:last-child { break-after: auto; }
+    /* emplacement d'un A5 après rotation (210 × 148,5 mm) */
+    #massicot-zone .slot {
+        position: relative;
+        width: 210mm;
+        height: 148.5mm;
+        overflow: hidden;
+    }
+    /* A5 mis sur le flanc : centré et tourné dans son emplacement */
+    #massicot-zone .sheet {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 148mm;
+        height: 210mm;
+        transform: translate(-50%, -50%) rotate(90deg);
+        overflow: hidden;
+        margin: 0;
+        box-shadow: none;
+        break-after: auto;
+        break-inside: avoid;
+    }
+}
