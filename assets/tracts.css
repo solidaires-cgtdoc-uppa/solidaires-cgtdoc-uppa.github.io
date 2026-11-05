@@ -1,4 +1,4 @@
-/* Les polices de la charte se chargeront en local (aperçu ici en polices système) */
+	/* Les polices de la charte se chargeront en local (aperçu ici en polices système) */
 	@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Montserrat:wght@700&display=swap');
 
 	:root {
@@ -130,6 +130,17 @@
 		font-size: 9.5pt;
 	}
 
+	/* Bloc dense (verso) : resserré pour faire tenir un long programme sur une page.
+	   Si le contenu déborde encore, descendre font-size à 7pt. */
+	.bloc--compact {
+		font-size: 8pt;
+		line-height: 1.3;
+	}
+	.bloc--compact .col {
+		columns: 2;
+		column-gap: 5mm;
+	}
+
 	.sheet h2 {
 		font-size: 11.5pt;
 		border-bottom: 3px solid #000;
@@ -152,8 +163,26 @@
 		font-size: 8.5pt;
 		font-style: italic;
 	}
-	.li { margin: 0 0 .8mm; }
-	 ul { margin: 0 0 1mm; padding-left: 3mm; }
+	.logo-slot {
+		flex: none;
+		width: 24mm;
+		height: 24mm;
+		border: 2px dashed #999;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #999;
+		font-size: 7pt;
+		text-align: center;
+	}
+	.col {
+		column-width: 10em;
+		column-rule: 1px solid rgb(75 70 74);
+	}
+	.col p { margin: 1mm 0 .5mm; }
+	.col ul { margin: 0 0 1mm; padding-left: 3mm; }
+	.col li { margin: 0 0 .8mm; }
 	/* Texte indicatif à remplacer */
 	.placeholder { color: #8a8f9c; font-style: italic; }
 	p { margin: 0; }
@@ -163,8 +192,10 @@
 		border-top: 2px solid #000;
 		padding-top: 1.5mm;
 		font-size: 7pt;
+		line-height: 1.35;
 		text-align: center;
 	}
+	.tract-footer p + p { margin-top: .5mm; }
 
 	/* Verso : étapes de vote */
 	.steps {
@@ -180,11 +211,29 @@
 	.contact-grid {
 		display: flex;
 		gap: 3mm;
+		flex: 1; /* le bloc contacts occupe l'espace restant : plus de grand vide */
 	}
-	.contact-grid .bloc { flex: 1; font-size: 8pt; }
+	.contact-grid .bloc {
+		flex: 1;
+		font-size: 8pt;
+		display: flex;
+		flex-direction: column;
+		justify-content: center; /* contenu centré verticalement dans le bloc */
+	}
 	.contact-grid h3 {
 		font-size: 9pt;
-		margin-bottom: 1mm;
+		margin-bottom: 1.5mm;
+	}
+	.contact-grid p + p { margin-top: .6mm; }
+	.contact-grid .bloc--qr {
+		align-items: center;
+		text-align: center;
+	}
+	.contact-grid .bloc--qr img {
+		width: 24mm;
+		height: auto;
+		display: block;
+		margin: 0 auto;
 	}
 
 	.date-clé {
@@ -192,11 +241,13 @@
 		color: #fff;
 		border: 2px solid #000;
 		border-radius: 4px;
-		padding: 1.5mm 3mm;
+		padding: 2mm 3mm;
 		text-align: center;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 8.5pt;
+		font-size: 9pt;
 	}
+	.date-clé p + p { margin-top: .4mm; }
+	.date-clé b { font-size: 11pt; letter-spacing: .02em; }
 
 	/* ===== Impression ===== */
 	@media print {
