@@ -147,7 +147,7 @@ main h2 {
 	width: min(210px, 100%);
 }
 .rs .social {
-	width: 140px;
+	width: 180px;
 }
 .partenaires a:hover, .rs .social:hover {
 	transform: translateY(-3px);
