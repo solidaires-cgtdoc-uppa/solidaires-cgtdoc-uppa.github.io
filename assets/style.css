@@ -1,29 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo&family=Montserrat:wght@700&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css');
 
+/* ===== Variables : couleurs, fontes et ombres réutilisées ===== */
+:root {
+	--texte: #383E4B;
+	--bleu: #0099d1;
+	--titre: 'Montserrat', sans-serif;
+	--ombre: 0 2px 4px rgba(0, 0, 0, .1);
+	--ombre-survol: 0 4px 10px rgba(0, 0, 0, .15);
+}
+
+/* ===== Base ===== */
 html {
 	font-family: 'Arimo', sans-serif;
-	background-color: #ffffff;
-	color: #383E4B;
+	background: #fff;
+	color: var(--texte);
 	max-width: 95%;
 	margin: auto;
-	scroll-behavior: smooth;
 	line-height: 1.45;
-}
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
 }
 body {
 	max-width: 1250px;
 	margin: auto;
 }
+h1, h2, h3, h4, h5, h6,
+.badge, .axe summary, .buttonvote {
+	font-family: var(--titre);
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+a {
+	color: var(--bleu);
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+::selection {
+	background: #000;
+	color: #fff;
+}
+:focus-visible {
+	outline: 3px solid var(--bleu);
+	outline-offset: 2px;
+}
+
+/* ===== En-tête ===== */
 header {
 	text-align: center;
 }
 header img {
 	max-width: 250px;
-	margin: auto;
 	display: inline-block;
+	transition: transform .2s ease-in-out;
+}
+header img:hover {
+	transform: rotate(-4deg) scale(1.06);
 }
 header h1 {
 	font-size: clamp(1.7em, 5vw, 3em);
@@ -35,212 +71,152 @@ header p {
 	font-weight: bolder;
 	font-size: clamp(1em, 2.5vw, 1.4em);
 }
+
 /* Sticker « Élections 2026 » */
 .badge {
-    display: inline-block;
-    background: #E02130;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: .78em;
-    padding: .45em .9em;
-    border: 2px solid #000;
-    border-radius: .4em;
-    box-shadow: 3px 3px 0 #000;
-    transform: rotate(-6deg);
-    margin-left: .6em;
-    vertical-align: middle;
-    white-space: nowrap;
-    transition: transform .15s ease-in-out;
+	display: inline-block;
+	background: #E02130;
+	color: #fff;
+	font-weight: 700;
+	font-size: .78em;
+	padding: .45em .9em;
+	border: 2px solid #000;
+	border-radius: .4em;
+	box-shadow: 3px 3px 0 #000;
+	transform: rotate(-6deg);
+	margin-left: .6em;
+	vertical-align: middle;
+	white-space: nowrap;
+	transition: transform .15s ease-in-out;
 }
 .badge:hover {
-    text-decoration: none;   /* neutralise le soulignement global des liens */
-    transform: rotate(-3deg) scale(1.06);
+	text-decoration: none;   /* neutralise le soulignement global des liens */
+	transform: rotate(-3deg) scale(1.06);
 }
 
-/* Logo qui s'anime doucement au survol */
-header img {
-    transition: transform .2s ease-in-out;
-}
-header img:hover {
-    transform: rotate(-4deg) scale(1.06);
-}
-
-/* Respect des personnes sensibles au mouvement */
-@media (prefers-reduced-motion: reduce) {
-    header img, .badge { transition: none; }
-}
 main h2 {
 	display: inline-block;
 	border-bottom: 4px solid #000;
 	padding-bottom: .15em;
 	margin-bottom: .75em;
 }
-a {
-	color: #0099d1;
-	text-decoration: none;
-	transition: color .15s ease-in-out;
-}
-a:hover {
-	text-decoration: underline;
-}
-::selection {
-	background: #000;
-	color: #fff;
-}
-:focus-visible {
-	outline: 3px solid #0099d1;
-	outline-offset: 2px;
-}
-img {
-	max-width: 100%;
-	height: auto;
-	border: 0;
-	vertical-align: middle;
-}
 
-/* ===== Sections « listes » : membres, soutiens, réseaux ===== */
-.listes {
-	max-width: 900px;   /* même gabarit que .axes */
-	margin: auto;
+/* ===== Conteneurs centrés (mêmes gabarits) ===== */
+.listes, .axes, .voter {
+	max-width: 900px;
+	margin-inline: auto;
 }
 .listes h2 {
 	margin-top: 2.5em;
 }
+
+/* ===== Cartes : partenaires et réseaux sociaux ===== */
 .colonnes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	align-items: flex-start;
 }
 .colonnes > section {
-    flex: 1 1 0;
-    min-width: 290px;
+	flex: 1 1 0;
+	min-width: 290px;
 }
-.partenaires {
+
+.partenaires, .rs {
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 20px;
 }
-.partenaires a {
+.partenaires a, .rs .social {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: .75em;
-	width: min(210px, 100%);
 	padding: 1.5em 1em;
 	background: #fff;
 	border: 1px solid #e0e0e0;
 	border-radius: 8px;
-	box-shadow: 0 2px 4px rgba(0,0,0,.1);
-	color: #383E4B;
+	box-shadow: var(--ombre);
+	color: var(--texte);
 	text-align: center;
 	transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
 }
-.partenaires a:hover {
+.partenaires a {
+	width: min(210px, 100%);
+}
+.rs .social {
+	width: 140px;
+}
+.partenaires a:hover, .rs .social:hover {
 	transform: translateY(-3px);
-	box-shadow: 0 4px 10px rgba(0,0,0,.15);
+	box-shadow: var(--ombre-survol);
 	text-decoration: none;
 }
 .partenaires img {
 	height: 80px;
 	max-width: 80%;
 	object-fit: contain;
-	display: block;
-}
-/* Réseaux sociaux : même motif « carte » que .partenaires */
-.rs {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 20px;               /* même gap que .partenaires */
-}
-.rs .social {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: .75em;
-	width: 140px;            /* ou min(210px, 100%) pour matcher au pixel près */
-	padding: 1.5em 1em;
-	background: #fff;
-	border: 1px solid #e0e0e0;
-	border-radius: 8px;
-	box-shadow: 0 2px 4px rgba(0,0,0,.1);
-	color: #383E4B;          /* même couleur de libellé que .partenaires a */
-	text-align: center;
-	transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
-}
-.rs .social:hover {
-	transform: translateY(-3px);   /* même survol que .partenaires a */
-	box-shadow: 0 4px 10px rgba(0,0,0,.15);
-	text-decoration: none;
 }
 .rs .social i {
 	font-size: 2.5em;
 	color: #000;
 }
-footer nav {
-	margin: auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	gap: 1em;
-}
+
+/* ===== Pied de page ===== */
 footer {
 	margin-top: 5em;
 }
-
+footer nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 1em;
+}
 footer .credits {
-    font-size: .6em;
-    text-align: right;
+	font-size: .6em;
+	text-align: right;
 }
-/* ===== Accordéons des axes ===== */
-.axes {
-	max-width: 900px;
-	margin: auto;
-}
-.axe0 { background:#000;}
-.axe1 { background:#482344;}
-.axe2 { background:#2B5166;}
-.axe3 { background:#429867;}
-.axe4 { background:#FAB243;}
-.axe5 { background:#E02130;}
-.axe6 { background:#F4BF3B;}
-.axe7 { background:#34993F;}
-.axe8 { background:#07616D;}
-.axe {
+
+/* ===== Accordéons des axes et bloc « voter » ===== */
+.axe, .voter, .communiques {
 	border: 2px solid #000;
-	border-radius: 0.5em;
+	border-radius: .5em;
 	overflow: hidden;
+}
+.axe {
 	margin-bottom: 1.5em;
 }
+.axe0 { background: #000; }
+.axe1 { background: #482344; }
+.axe2 { background: #2B5166; }
+.axe3 { background: #429867; }
+.axe4 { background: #FAB243; }
+.axe5 { background: #E02130; }
+.axe6 { background: #F4BF3B; }
+.axe7 { background: #34993F; }
+.axe8 { background: #07616D; }
+
 .axe summary {
-	list-style: none;
-	cursor: pointer;
 	display: flex;
 	align-items: center;
 	gap: .75em;
 	padding: 1em 1.25em;
 	color: #fff;
-	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: clamp(1em, 2.5vw, 1.15em);
 	line-height: 1.3;
+	cursor: pointer;
 	user-select: none;
+	list-style: none;
 	transition: filter .15s ease-in-out;
-}
-.axe summary:hover {
-	filter: brightness(1.15);
 }
 .axe summary::-webkit-details-marker {
 	display: none;
+}
+.axe summary:hover {
+	filter: brightness(1.15);
 }
 .axe .num {
 	flex: none;
@@ -254,8 +230,8 @@ footer .credits {
 	font-size: .9em;
 }
 .axe .chev {
-	margin-left: auto;
 	flex: none;
+	margin-left: auto;
 	width: .5em;
 	height: .5em;
 	border-right: .22em solid #fff;
@@ -279,48 +255,39 @@ footer .credits {
 	margin-bottom: 0;
 }
 /* Texte lisible sur le fond jaune de l'axe 6 */
-.axe .axe6 {
-	color: #383E4B;
+.axe6 summary {
+	color: var(--texte);
 }
-.axe .axe6 .num,
-.axe .axe6 .chev {
-	border-color: #383E4B;   /* avant : la règle border-color ne visait rien */
+.axe6 .num, .axe6 .chev {
+	border-color: var(--texte);
 }
-/* ===== Fin accordéons ===== */
 
-/* ===== Bloc « voter » : même famille que .axe ===== */
+/* ===== Bloc « voter » ===== */
 .voter {
-	max-width: 900px;        /* même gabarit que .axes */
-	margin: 0 auto 1.5em;    /* centré comme .axes */
-	border: 2px solid #000;  /* même bordure que .axe */
-	border-radius: 0.5em;
-	overflow: hidden;
-	background: #f3f3f3;     /* même fond que .axe-content */
-	padding: 0;
+	margin-bottom: 1.5em;
+	background: #f3f3f3;
 }
-.voter > .buttonvote {
+.buttonvote {
 	display: block;
 	margin: 0;
 	border: 0;
-	border-radius: 0;
-	padding: 1em 1.25em;     /* même padding que .axe summary */
-	background: #000;       /* bandeau noir, comme un summary */
+	padding: 1em 1.25em;
+	background: #000;
 	color: #fff;
-	font-family: 'Montserrat', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: .06em;
 	font-size: 1.15em;
 	transition: filter .15s ease-in-out;
 }
-.voter > .buttonvote:hover {
-	filter: brightness(1.15);   /* même survol que .axe summary */
+.buttonvote:hover {
+	filter: brightness(1.15);
 	text-decoration: none;
 }
 .voter .aide {
 	margin: 0;
 	padding: .75em 1.25em;
-	border-bottom: 2px solid #000;   /* filet, comme entre summary et contenu */
+	border-bottom: 2px solid #000;
 	background: #fff;
 	text-align: center;
 }
@@ -333,11 +300,19 @@ footer .credits {
 
 /* ===== Communiqués ===== */
 .communiques {
-	border: 2px solid #000;
-	border-radius: 0.5em;
 	padding: 1em;
 	margin-top: 1em;
 	background: #f3f3f3;
+}
+
+/* ===== Accessibilité mouvement ===== */
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	header img, .badge {
+		transition: none;
+	}
 }
 
 /* ===== Mobile ===== */
@@ -348,12 +323,11 @@ footer .credits {
 	.partenaires img {
 		height: 50px;
 	}
-	.partenaires a {
+	.partenaires a, .rs .social {
 		padding: 1em .75em;
 	}
 	.rs .social {
 		width: 110px;
-		padding: 1em .75em;
 	}
 	.rs .social i {
 		font-size: 2em;
@@ -364,7 +338,7 @@ footer .credits {
 	.axe .axe-content {
 		padding: 1.1em 1em;
 	}
-	.voter > .buttonvote {
+	.buttonvote {
 		padding: 1em .9em;
 	}
 	.voter .aide {
