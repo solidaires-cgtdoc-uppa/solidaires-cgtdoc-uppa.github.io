@@ -195,9 +195,9 @@
 		column-width: 10em;
 		column-rule: 1px solid rgb(75 70 74);
 	}
-	.col p { margin: 1mm 0 .5mm; }
-	.col ul { margin: 0 0 1mm; padding-left: 3mm; }
-	.col li { margin: 0 0 .8mm; }
+	p { margin: 1mm 0 .5mm; }
+	ul { margin: 0 0 1mm; padding-left: 3mm; }
+	li { margin: 0 0 .8mm; }
 	/* Texte indicatif à remplacer */
 	.placeholder { color: #8a8f9c; font-style: italic; }
 	p { margin: 0; }
