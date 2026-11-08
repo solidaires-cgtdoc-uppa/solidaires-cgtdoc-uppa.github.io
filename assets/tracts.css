@@ -140,6 +140,7 @@
 	.bloc--gris {
 		background: #f3f3f3;
 		font-size: 9.5pt;
+		line-height: 1.2;
 	}
 
 	/* Bloc programme (verso) : avec la version COURTE des mesures (~55 % du
