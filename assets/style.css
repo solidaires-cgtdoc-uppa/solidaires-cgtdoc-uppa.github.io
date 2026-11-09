@@ -94,6 +94,39 @@ header p {
 	transform: rotate(-3deg) scale(1.06);
 }
 
+/* ===== Menu de navigation, discret sous le logo ===== */
+.menu {
+	margin: .75em 0 .25em;
+}
+.menu ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: .25em 1.75em;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu a {
+	display: inline-block;
+	padding: .15em .2em;
+	font-family: var(--titre);
+	font-size: .85em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+}
+.menu a:hover {
+	text-decoration: underline;
+	text-underline-offset: .2em;
+}
+.menu a[aria-current="page"] {
+	color: var(--texte);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: .2em;
+}
+
 main h2 {
 	display: inline-block;
 	border-bottom: 4px solid #000;
@@ -319,6 +352,15 @@ footer .credits {
 @media (max-width: 1000px) {
 	header img {
 		max-width: 100px;
+	}
+	.menu {
+		margin: .5em 0 .15em;
+	}
+	.menu ul {
+		gap: .25em 1.1em;
+	}
+	.menu a {
+		font-size: .8em;
 	}
 	.partenaires img {
 		height: 50px;

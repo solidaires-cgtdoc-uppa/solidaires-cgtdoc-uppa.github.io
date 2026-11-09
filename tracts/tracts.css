@@ -375,3 +375,80 @@
 		box-shadow: none;
 	}
 }
+
+/* ===== Mode rédaction : édition directe des textes (écran uniquement) =====
+   La classe body.edition est ajoutée par le script quand la rédaction est
+   activée : liseret rouge autour des feuilles modifiables, et surlignage des
+   textes d'exemple encore à remplacer. Rien de tout cela ne s'imprime. */
+body.edition > .sheet {
+	outline: 3px dashed rgba(224,33,48,.55);
+	outline-offset: 2px;
+	cursor: text;
+}
+body.edition .placeholder {
+	outline: 1px dashed rgba(224,33,48,.5);
+	background: rgba(224,33,48,.06);
+}
+/* le logo et le QR ne se déplacent pas par accident pendant l'édition
+   (les changer se fait en remplaçant les fichiers dans assets/) */
+body.edition .sheet img { pointer-events: none; }
+/* sur les planches du massicot, pas de repère de dépassement redondant :
+   la classe .overflows y sert uniquement à l'alerte avant impression */
+@media screen {
+	body.massicot #massicot-zone .sheet.overflows::before,
+	body.massicot #massicot-zone .sheet.overflows::after { content: none; }
+}
+@media print {
+	body.edition > .sheet,
+	body.edition .placeholder { outline: none; }
+}
+
+/* ===== Barre de mise en forme du mode rédaction (écran uniquement) =====
+   N'apparaît que pendant la rédaction (classe body.edition), suit le
+   défilement pour rester sous la main, et ne s'imprime jamais. */
+.format-bar { display: none; }
+body.edition .format-bar {
+	display: flex;
+	align-items: center;
+	gap: 2mm;
+	position: sticky;
+	top: 4mm;
+	z-index: 20;
+	width: max-content;
+	max-width: 92vw;
+	margin: 4mm auto 0;
+	background: #fff;
+	border: 2px solid #000;
+	border-radius: 6px;
+	padding: 2mm 3mm;
+	box-shadow: 2px 2px 0 #000;
+}
+.format-bar .astuce { font-size: 12px; margin-right: 1mm; }
+.format-bar button {
+	font: inherit;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	background: #fff;
+	border: 2px solid #000;
+	border-radius: 5px;
+	padding: 1px 8px;
+	cursor: pointer;
+	box-shadow: 2px 2px 0 #000;
+}
+.format-bar button:active {
+	box-shadow: none;
+	transform: translate(2px, 2px);
+}
+.format-bar .sep {
+	width: 2px;
+	align-self: stretch;
+	background: #000;
+	margin: 0 1mm;
+}
+@media print {
+	.format-bar { display: none; }
+}
+
+/* Liens insérés en mode rédaction : sobres et lisibles, aussi sur papier */
+.sheet a { color: inherit; text-decoration: underline; }

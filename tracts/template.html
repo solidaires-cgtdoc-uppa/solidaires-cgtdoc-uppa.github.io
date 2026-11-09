@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Tract A5 — Pour une université populaire</title>
-	<link href="../assets/tracts.css" rel="stylesheet">
+	<link href="tracts.css" rel="stylesheet">
 	<style id="page-massicot" media="not print">
 		/* Activé par le script en mode massicot uniquement : planches A4 paysage. */
 		@page { size: A4 landscape; margin: 0; }
@@ -14,7 +14,7 @@
 
 	<div class="toolbar">
 		<b>Modèle de tract A5 recto-verso.</b>
-		Éditez les textes directement dans le HTML (les passages en <i>italique gris</i> sont à remplacer),
+		Rédigez les textes directement dans le navigateur avec le bouton <b>« Activer la rédaction »</b> ci-dessous (les passages en <i>italique gris</i> sont à remplacer),
 		puis : <b>Ctrl+P</b> → papier <b>A5</b> · marges <b>aucune</b> · cocher <b>« Graphiques d'arrière-plan »</b> · recto-verso <b>reliure bord long</b>.
 		Si un contenu déborde d'une page, il s'écoule automatiquement sur une page supplémentaire au même gabarit ;
 		à l'écran, une <b style="color:#E02130">ligne rouge</b> marque la limite de la page A5 et rosit la zone qui débordera (ce repère n'est jamais imprimé).
@@ -25,6 +25,35 @@ soit <b>2 tracts complets</b> :
 cliquez (le bouton passe en rouge), les planches s'affichent à l'écran pour contrôle, puis <b>Ctrl+P</b> ·
 papier <b>A4</b> · orientation <b>paysage</b> · marges <b>aucune</b> · échelle <b>100 %</b> ·
 pages par feuille <b>1</b> · recto-verso <b>reliure bord court</b>.
+		<br><br>
+		<button type="button" id="btn-edition">Activer la rédaction</button>
+		→ puis cliquez sur n'importe quel texte du tract pour le retaper directement, sans toucher au code.
+		Mise en forme de base (gras, italique, titres, liens, listes à puces) : sélectionnez du texte, puis utilisez la petite barre qui apparaît au-dessus des tracts (ou <b>Ctrl+B</b> / <b>Ctrl+I</b>).
+		Rédaction et massicot s'excluent : activer l'un désactive automatiquement l'autre.
+		Vos modifications sont gardées automatiquement dans ce navigateur, même après l'avoir fermé (brouillon local, propre à chaque poste).
+		<button type="button" id="btn-reset">Réinitialiser les textes</button> : revenir au modèle d'origine.
+		<br><br>
+		<button type="button" id="btn-print">Imprimer (Ctrl+P)</button>
+		<button type="button" id="btn-save">Télécharger la copie modifiable (HTML)</button>
+		→ le fichier téléchargé s'ouvre et s'imprime exactement comme ce modèle ;
+		pour que liens et images fonctionnent, à enregistrer dans le <b>même dossier</b> que ce modèle (juste à côté de votre dossier <i>assets/</i>),
+		ou à transmettre tel quel à qui reprendra la mise en page.
+	</div>
+
+	<div class="format-bar" id="format-bar">
+		<span class="astuce">Mise en forme :</span>
+		<button type="button" data-cmd="bold" title="Gras (Ctrl+B)"><b>G</b></button>
+		<button type="button" data-cmd="italic" title="Italique (Ctrl+I)"><i>I</i></button>
+		<span class="sep"></span>
+		<button type="button" data-cmd="formatBlock" data-val="h2" title="Titre de section (gros, filet dessous)">Titre</button>
+		<button type="button" data-cmd="formatBlock" data-val="h3" title="Sous-titre">Sous-titre</button>
+		<span class="sep"></span>
+		<button type="button" data-cmd="formatBlock" data-val="p" title="Revenir à du texte normal">Texte</button>
+		<span class="sep"></span>
+		<button type="button" data-cmd="createLink" title="Transformer la sélection en lien cliquable">Lien</button>
+		<button type="button" data-cmd="unlink" title="Retirer le lien de la sélection">Retirer le lien</button>
+		<span class="sep"></span>
+		<button type="button" data-cmd="insertUnorderedList" title="Liste à puces (re-cliquez sur une liste pour la retirer)">Puces</button>
 	</div>
 
 
@@ -76,7 +105,8 @@ pages par feuille <b>1</b> · recto-verso <b>reliure bord court</b>.
 			<p class="placeholder">Espace pour un court extrait de la profession de foi, un slogan développé ou trois revendications détaillées. Attention à ne pas dépasser la hauteur de la page : tout ce qui dépasse sera coupé à l'impression.</p>
 		</div>
 	</section>
-<script src="../assets/tracts.js"></script>
+<script src="tracts.js"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" nonce="8q0hM38zXpXrqwPRsJyJoQ==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" nonce="wPGVfBsO0Tq8U8mE071k4A==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
