@@ -179,6 +179,32 @@
 		font-size: 8.5pt;
 		font-style: italic;
 	}
+	/* Colonne droite de l'en-tête : badge + QR code + légende */
+	.header-side {
+		flex: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 1mm;
+	}
+	.header-side img {
+		width: 22mm;
+		height: auto;
+		display: block;
+	}
+	.header-side .qr-url {
+		margin: 0;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 7.5pt;
+	}
+	.header-side .qr-mention {
+		margin: 0;
+		font-size: 6.5pt;
+		font-style: italic;
+		color: #555;
+	}
 	.logo-slot {
 		flex: none;
 		width: 24mm;
@@ -241,16 +267,6 @@
 		margin-bottom: 1.5mm;
 	}
 	.contact-grid p + p { margin-top: .6mm; }
-	.contact-grid .bloc--qr {
-		align-items: center;
-		text-align: center;
-	}
-	.contact-grid .bloc--qr img {
-		width: 24mm;
-		height: auto;
-		display: block;
-		margin: 0 auto;
-	}
 
 	.date-clé {
 		background: var(--rouge);
