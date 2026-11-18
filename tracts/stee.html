@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tract A5 — Pour une université populaire</title>
+	<link href="tracts.css" rel="stylesheet">
+	<style id="page-massicot" media="not print">
+		/* Activé par le script en mode massicot uniquement : planches A4 paysage. */
+		@page { size: A4 landscape; margin: 0; }
+	</style>
+</head>
+<body class="">
+
+	<div class="toolbar">
+		<b>Modèle de tract A5 recto-verso.</b>
+		Rédigez les textes directement dans le navigateur avec le bouton <b>« Activer la rédaction »</b> ci-dessous (les passages en <i>italique gris</i> sont à remplacer),
+		puis : <b>Ctrl+P</b> → papier <b>A5</b> · marges <b>aucune</b> · cocher <b>« Graphiques d'arrière-plan »</b> · recto-verso <b>reliure bord long</b>.
+		Si un contenu déborde d'une page, il s'écoule automatiquement sur une page supplémentaire au même gabarit ;
+		à l'écran, une <b style="color:#E02130">ligne rouge</b> marque la limite de la page A5 et rosit la zone qui débordera (ce repère n'est jamais imprimé).
+		<br><br>
+		<button type="button" id="btn-massicot">Mode massicot : 2 tracts par A4</button>
+		→ recto ×2 puis verso ×2 par feuille A4 <b>paysage</b> (2 A5 côte à côte, coupe verticale au milieu),
+soit <b>2 tracts complets</b> :
+cliquez (le bouton passe en rouge), les planches s'affichent à l'écran pour contrôle, puis <b>Ctrl+P</b> ·
+papier <b>A4</b> · orientation <b>paysage</b> · marges <b>aucune</b> · échelle <b>100 %</b> ·
+pages par feuille <b>1</b> · recto-verso <b>reliure bord court</b>.
+		<br><br>
+		<button type="button" id="btn-edition" class="">Activer la rédaction</button>
+		→ puis cliquez sur n'importe quel texte du tract pour le retaper directement, sans toucher au code.
+		Mise en forme de base (gras, italique, titres, liens, listes à puces) : sélectionnez du texte, puis utilisez la petite barre qui apparaît au-dessus des tracts (ou <b>Ctrl+B</b> / <b>Ctrl+I</b>).
+		Rédaction et massicot s'excluent : activer l'un désactive automatiquement l'autre.
+		Vos modifications sont gardées automatiquement dans ce navigateur, même après l'avoir fermé (brouillon local, propre à chaque poste).
+		<button type="button" id="btn-reset">Réinitialiser les textes</button> : revenir au modèle d'origine.
+		<br><br>
+		<button type="button" id="btn-print">Imprimer (Ctrl+P)</button>
+		<button type="button" id="btn-save">Télécharger la copie modifiable (HTML)</button>
+		→ le fichier téléchargé s'ouvre et s'imprime exactement comme ce modèle ;
+		pour que liens et images fonctionnent, à enregistrer dans le <b>même dossier</b> que ce modèle (juste à côté de votre dossier <i>assets/</i>),
+		ou à transmettre tel quel à qui reprendra la mise en page.
+	</div>
+
+	<div class="format-bar" id="format-bar">
+		<span class="astuce">Mise en forme :</span>
+		<button type="button" data-cmd="bold" title="Gras (Ctrl+B)"><b>G</b></button>
+		<button type="button" data-cmd="italic" title="Italique (Ctrl+I)"><i>I</i></button>
+		<span class="sep"></span>
+		<button type="button" data-cmd="formatBlock" data-val="h2" title="Titre de section (gros, filet dessous)">Titre</button>
+		<button type="button" data-cmd="formatBlock" data-val="h3" title="Sous-titre">Sous-titre</button>
+		<span class="sep"></span>
+		<button type="button" data-cmd="formatBlock" data-val="p" title="Revenir à du texte normal">Texte</button>
+		<span class="sep"></span>
+		<button type="button" data-cmd="createLink" title="Transformer la sélection en lien cliquable">Lien</button>
+		<button type="button" data-cmd="unlink" title="Retirer le lien de la sélection">Retirer le lien</button>
+		<span class="sep"></span>
+		<button type="button" data-cmd="insertUnorderedList" title="Liste à puces (re-cliquez sur une liste pour la retirer)">Puces</button>
+	</div>
+
+
+<!-- ==================== RECTO ==================== -->
+		<section class="sheet" id="recto">
+
+		<header class="tract-header">
+			<img src="../assets/logo.svg" alt="Liste Pour une université populaire" style="width:24mm">
+			<div style="flex:1">
+				<h1><br></h1><h1>Pour une université populaire</h1>
+				<p class="slogan">Université gratuite, émancipatrice, de proximité</p><p class="slogan"><br></p><p><b style="font-style: normal;">Collège STEE</b></p>
+			</div>
+			<div class="header-side">
+				<span class="badge">Élections 2026</span>
+				<img src="../assets/qrcode.png" alt="QR univpop-pau.fr">
+				<p class="qr-url">Programme complet sur <br>univpop-pau.org</p>
+			</div>
+		</header>
+
+		<div class="bloc bloc--gris">
+			<h2>Qui sommes-nous ?</h2><p>Le 23 et 24 novembre 2026, nous votons pour élire nos représentant⋅es au sein des différents conseils de l’université. Nous sommes engagés pour une vie étudiante digne, pour une université égalitaire et inclusive, pour un service public de qualité, une université durable et une diversité culturelle, pour une recherche pérenne, diversifiée et indépendante.</p><p></p><div><ul><li><b>Nos candidats à la CFVU</b></li></ul></div><div>José-Armando Dias, L2 informatique&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Mathilde Carteau, M2 mathématiques</div><div>Duarte Corral Dias,BUT Science des données Clémence Bonnety L1 informatique</div><div>Ziga Wilfried Irie Bi,&nbsp; Science des données&nbsp; &nbsp; &nbsp; &nbsp;Lylia Vaz,&nbsp; L1 Sciences de la Vie</div><div>La Commission de la Formation et de la Vie Universitaire (CFVU) est l'instance chargée de la répartition des moyens pédagogiques et de l'amélioration du cadre de vie étudiant, incluant les activités culturelles et sportives, les conseils disciplinaires ainsi que l'accompagnement des étudiants en situation de handicap ou à statut particulier.</div><div><br></div><div><ul><li><b>Pour le conseil des collèges</b></li></ul></div><div><b>Nos candidat.es en Licence :&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Nos candidat.es en Master :</b></div><div>José-Armando Dias L2 informatique&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Mathilde Carteau&nbsp;</div><div>Clémence Bonnety&nbsp; L1 informatique&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; M2 Mathématiques GREEN</div><div>Duarte Corral Dias BUT Science des données&nbsp; &nbsp; Titouan Charrier</div><div>Ludivine Ferry&nbsp; L2 Informatique&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; M2 Informatique</div><div>Le Conseil des collèges, véritable relais local des décisions prises par le CA et la CFVU, s’occupant de l’élaboration des maquettes de cours pour chaque formation, l’entretien des bâtiments ou encore de la consultation des étudiant⋅es en conseil paritaire et de perfectionnement.</div><div><i>" Notre candidature s’inscrit dans une réelle volonté d’œuvrer pour une meilleure université pour nous, étudiant.es. Nous saurons porter la voix de toutes et tous au sein de ces instances décisionnaires en étant à votre écoute.&nbsp; N</i><i style="font-size: 9.5pt;">ous sommes pour la transparence des prises de décisions et nous aurons à cœur de vous informer tout au long de notre mandat des décisions prises au sein de ces instances."&nbsp;</i>Les candidats sciences de la liste.</div><p></p></div>
+
+		
+		<footer class="tract-footer">
+			<p>Liste portée par Solidaires Étudiant·e·s Pau-Béarn et le collectif doctorant·e·s CGT FercSup — soutenue par la CGT FercSup UPPA et la liste UHS. Ne pas jeter sur la voie publique</p>
+		</footer>
+	</section>
+
+
+	<!-- ==================== VERSO ==================== -->
+	<section class="sheet" id="verso">
+		<div class="bloc bloc--gris" style="flex:1; font-size:.74em;">
+			<p></p><h2><b>Les grands axes de notre profession de foi</b></h2><ul><li><b>Pour une vie étudiante digne&nbsp;</b></li></ul><p></p><p>L'égalité des frais d'inscription ; le renforcement du service de santé ; la mise en place de services concrets luttant contre la précarité matérielle comme un réseau de transport de nuit, des services de proximité CROUS (coiffeur, laverie automatique...).</p><p><br></p><p></p><ul><li><b>Pour une université égalitaire et inclusive</b></li></ul><p></p><p>Une université pleinement accessible (aménagements du bâti, preneur·ses de notes, sensibilisation au handicap) et engagée contre les discriminations et les VSS (formation du personnel, écriture inclusive, prénom d'usage automatique et présence des syndicats au sein des cellules d'accompagnement).</p><p><br></p><p></p><ul><li><b>Pour un service public de qualité, une université durable et une diversité culturelle</b></li></ul><p></p><p>Pas de représentant·es d'acteurs privés dans les conseils ; la suppression de Parcoursup et de la sélection à l'université ; le droit aux rattrapages et à la compensation pour toutes et tous ; tous les cours mis en ligne. soutien à la vie associative et développement des échanges entre les campus ainsi qu'à l'international. la démocratisation du vélo sur les campus.</p><p><br></p><p></p><ul><li><b>Pour une recherche pérenne, diversifiée et indépendante</b></li></ul><p></p><p>des contrats doctoraux sur fonds ministériels et l'exonération des frais d'inscription pour tou·tes les doctorant·es ;</p><p>des postes titulaires et la titularisation des contractuel·les ;</p>
+		</div>
+		<div class="bloc bloc--gris">
+			<h2>Comment voter aux élections ?</h2>
+				<ol>
+					<li>Rends-toi sur <a href="https://partage.univ-pau.fr/"><b>ton mail étudiant</b></a> et trouve le mail dont l'objet commence par <b>« Université de Pau et des pays de l'Adour - Information »</b> venant de <b>KERCIA</b> et daté du 6 novembre 2026.</li>
+					<li>Avec l'identifiant fourni dans ce dernier et de ton numéro étudiant (ou persID), connecte-toi sur le lien indiqué et génère un mot de passe. En cas de suppression du courriel, tu peux retrouver un nouveau mot de passe à cette adresse : https://uppa.kercia.io.</li>
+					<li>Tu peux désormais te rendre dans l'espace de vote à l'aide du mot de passe que tu viens de recevoir, où tu auras accès aux différents conseils pour lesquels tu peux voter.</li>
+					<li>Clique sur la liste <b>Pour une université populaire</b> et valide ton choix à l'aide du mot de passe (attention, une fois validé, un choix ne peut être modifié).</li>
+					<li><i>Tu peux voter pour plusieurs conseils, il faut donc répéter l'opération autant de fois qu'il y a de conseils.</i></li>
+				</ol>
+		</div>
+		<div class="date-clé">
+			<p><b>On compte sur vous pour les 23 et 24 novembre !</b></p>
+		</div>
+	</section>
+<script src="tracts.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" nonce="8q0hM38zXpXrqwPRsJyJoQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;36b4216ae2dc4d5488c249161e71fe1e&quot;,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" nonce="wPGVfBsO0Tq8U8mE071k4A==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;36b4216ae2dc4d5488c249161e71fe1e&quot;,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
+
+
+
+
+</body></html>
